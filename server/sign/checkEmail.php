@@ -2,7 +2,7 @@
 
 include_once("../connection.php");
 
-$email = isset($_POST['email']);
+$email = isset($_GET['email']);
 
 $query = $mysqli->prepare("SELECT email FROM users WHERE email = ?");
 $query->bind_param('s', $email);
