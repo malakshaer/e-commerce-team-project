@@ -4,15 +4,17 @@ include("../connection.php");
 
 $id = isset($_POST["id"]);
 $name = isset($_POST["name"]);
-$description = isset($_POST["description"]);
-$price =isset($_POST["price"]);
-$discount_price = isset($_POST["discount_price"]);
-$picture_img = isset($_POST["picture_img"]);
+$email = isset($_POST["email"]);
+$birthday =isset($_POST["birthday"]);
+$join_date =isset($_POST["join_date"]);
+$profile_img =isset($_POST["profile_img"]);
+$client_id = isset($_POST["client_id"]);
+$user_type_id = isset($_POST["user_type_id"]);
 
 
-$query = "INSERT INTO products(id, name,description,price,discount_price,picture_img) VALUE (?,?,?,?,?,?)";
+$query = "SELECT FROM users(id, name,email,birthday,join_date,profile_img) VALUE (?,?,?,?,?,?) WHERE `user_type_id` = $client_id";
 $query = $mysqli->prepare($query);
-$query->bind_param("ssssss", $id, $name,$description,$price,$discount_price,$picture_img);
+$query->bind_param("ssssss", $id, $name,$email,$birthday,$join_date,$profile_img);
 $query->execute();
 
 
