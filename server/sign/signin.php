@@ -1,27 +1,30 @@
-<?php
+<?php 
 
+include_once("../connection.php");
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+$email = isset($_POST['email']);
+$password = isset($_POST['password']);
+$password = hash('sha256', $password);
 
-    $mysqli = new mysqli("localhost", "root", "", "spruce_db");
+$query = $mysqli->prepare("SELECT * FROM users WHERE email = ? ");
+$query->bind_param('s', $email);
+$query->execute();
+$array = $query->get_result();
 
-    $email = isset($_POST["email"]);
-    $password = isset($_POST["password"]);
+$arr =[];
+while($value = $array->fetch_assoc()){
+    $arr[] = $value;
+}
 
+$result =[];
+if(!$arr){
+$result['msg']= 'Your mail does not exist';
+}elseif($arr[0]['password']== $password){
+    $result=$arr[0];
+}else{
+    $result['msg']= 'Your password is wrong';
+}
 
-    $query = "SELECT * FROM `users` WHERE `email` = $email AND `password` = $password";
-    $stmt = $mysqli->query($query);
-    
-    
-    if ($stmt) {
-
-        echo "Login successful"; 
-        
-    } else {
-        
-        echo 'Incorrect username and/or password!';
-    }
-
-}    
+echo json_encode($result);
 ?>
 
