@@ -1,0 +1,164 @@
+/* Reset */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+  background-color: #fff;
+  color: black;
+}
+
+/* Mhamad */
+img {
+  height: 100%;
+}
+
+/* Mhamad: top-nav */
+.top-nav {
+  width: 24.375rem;
+  height: 5.3125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d4d4d4;
+  padding: 0.3125rem 1.25rem;
+}
+
+.top-nav h2 {
+  font-size: 2.6875rem;
+  font-weight: 900;
+  color: white;
+}
+
+.top-nav .hamburger-container {
+  width: 1.9375rem;
+  height: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-nav .hamburger {
+  position: absolute;
+  width: 1.9375rem;
+  height: 0.0625rem;
+  background-color: black;
+}
+
+.top-nav .hamburger::before,
+.top-nav .hamburger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.top-nav .hamburger::before {
+  top: -0.625rem;
+}
+
+.top-nav .hamburger::after {
+  top: 0.625rem;
+}
+
+.top-nav .profile-pic {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* Mhamad:side-nav */
+.side-nav {
+  /* to hide when not clicked */
+  /* position: relative;
+  top: 0;
+  left: -100%; */
+  width: 23.875rem;
+  height: 100vh;
+  background-color: #9e9e9e;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3.375rem;
+}
+
+.side-nav-logo-container {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-nav-logo {
+  height: 3.125rem;
+}
+
+.side-nav-tab-container {
+  height: 100%;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-nav-tab {
+  max-width: 21.875rem;
+  padding: 0.75rem 6.8125rem 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  /* background-color: white; */
+  border-radius: 3.125rem 0 0 3.125rem;
+}
+
+.side-nav-tab img {
+  width: 2.8125rem;
+  height: 2.461rem;
+  margin-right: 2.3125rem;
+}
+
+.side-nav-tab p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* on click show side-nav */
+/* .side-nav .slide {
+  left: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+/* only icons side-nav */
+/* .side-nav {
+  width: 8rem;
+}
+
+.side-nav-tab-container {
+  padding: 0;
+  align-items: center;
+}
+
+.side-nav-tab {
+  padding: 0;
+}
+
+.side-nav-tab img {
+  margin: 0;
+}
+.side-nav-tab p {
+  display: none;
+} */
+/* **** */
