@@ -278,13 +278,17 @@ h3 {
     display: none;
   }
 
+  .side-nav-tab-container {
+    padding: 0 1rem 0 2rem;
+  }
+
+  .side-nav {
+    max-width: 22rem;
+  }
+
   .side-nav-logo {
     display: block;
     height: 7rem;
-  }
-
-  .side-nav-tab-container {
-    padding: 0 1rem 0 2rem;
   }
 
   .side-nav-tab {
