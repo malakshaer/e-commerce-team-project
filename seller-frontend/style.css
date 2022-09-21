@@ -147,6 +147,10 @@ h3 {
 }
 
 /*** Start of Pages Content ***/
+.pages-content {
+  height: 100%;
+  overflow: scroll;
+}
 /* categories page content */
 .categories-header {
   display: flex;
@@ -179,12 +183,14 @@ h3 {
 
 .categories-content {
   width: 90%;
-  height: 3rem;
+  min-height: 3rem;
+  height: fit-content;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--grey);
   margin-bottom: 0.875rem;
+  padding: 0 0.5rem;
 }
 
 .categories-content h2 {
