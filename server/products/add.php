@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $description = $_POST["description"];
   $price =$_POST["price"];
   $discount_price = $_POST["discount_price"];
-  $picture_img = isset($_POST["picture_img"]);
+  $picture_img = $_POST["picture_img"];
   
 
   $sql = "INSERT INTO products(id, name,description,price,discount_price,picture_img) VALUE (?,?,?,?,?,?)";
