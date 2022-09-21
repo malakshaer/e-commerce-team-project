@@ -16,7 +16,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.3;
   background-color: #fff;
-  color: white;
+  color: black;
 }
 
 /* Mhamad */
@@ -148,6 +148,7 @@ img {
 .side-nav-tab p {
   font-size: 1.5rem;
   font-weight: bold;
+  color: white;
 }
 
 /* on click show side-nav */
