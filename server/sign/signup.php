@@ -1,8 +1,9 @@
 <?php
+include("../connection.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    $mysqli = new mysqli("localhost", "root", "", "spruce_db");
+    
     
     $name = $_POST["name"];
     $email = $_POST["email"];
@@ -23,8 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
     else
     {
-    echo "Something went wrong while registration!<BR>";
-    echo "Error Description: ", $mysqli -> error;
+    echo "Something went wrong while registration!";
     }
     
 }
