@@ -84,10 +84,10 @@ img {
 /* Mhamad:side-nav */
 .side-nav {
   /* to hide when not clicked */
-  /* position: relative;
-  top: 0;
+  /* top: 0;
   left: -100%; */
-  width: 23.875rem;
+  position: relative;
+  width: 100vw;
   height: 100vh;
   background-color: #9e9e9e;
   display: flex;
@@ -97,7 +97,7 @@ img {
 
 .side-nav-logo-container {
   width: 100%;
-  height: 15rem;
+  height: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,6 +105,12 @@ img {
 
 .side-nav-logo {
   height: 3.125rem;
+}
+
+.side-nav-close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
 }
 
 .side-nav-tab-container {
@@ -116,12 +122,12 @@ img {
 }
 
 .side-nav-tab {
-  max-width: 21.875rem;
-  padding: 0.75rem 6.8125rem 0.75rem 1.25rem;
+  width: 100%;
+  padding: 0.75rem 0 0.75rem 1.25rem;
   display: flex;
   align-items: center;
-  /* background-color: white; */
   border-radius: 3.125rem 0 0 3.125rem;
+  /* background-color: white; */
 }
 
 .side-nav-tab img {
@@ -139,26 +145,58 @@ img {
 /* .side-nav .slide {
   left: 0;
   transition: all 0.4s ease-in-out;
+}*/
+
+@media screen and (min-width: 400px) {
+  .side-nav {
+    width: 5rem;
+  }
+
+  .side-nav-tab-container {
+    padding: 0;
+    align-items: center;
+  }
+
+  .side-nav-close-btn {
+    display: none;
+  }
+
+  .side-nav-tab {
+    width: auto;
+    padding: 0.5rem;
+    border-radius: 20px;
+  }
+
+  .side-nav-tab img {
+    margin: 0;
+  }
+
+  .side-nav-tab p {
+    display: none;
+  }
 }
 
-/* only icons side-nav */
-/* .side-nav {
-  width: 8rem;
-}
+@media screen and (min-width: 1000px) {
+  .side-nav {
+    width: 30%;
+  }
 
-.side-nav-tab-container {
-  padding: 0;
-  align-items: center;
-}
+  .side-nav-tab-container {
+    padding-left: 2rem;
+    /* align-items: center; */
+  }
 
-.side-nav-tab {
-  padding: 0;
-}
+  .side-nav-tab {
+    width: 100%;
+    padding: 0.75rem 0 0.75rem 1.25rem;
+    border-radius: 3.125rem 0 0 3.125rem;
+  }
 
-.side-nav-tab img {
-  margin: 0;
+  .side-nav-tab img {
+    margin-right: 2.3125rem;
+  }
+
+  .side-nav-tab p {
+    display: block;
+  }
 }
-.side-nav-tab p {
-  display: none;
-} */
-/* **** */
