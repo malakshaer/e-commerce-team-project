@@ -38,6 +38,11 @@ h2 {
   font-weight: 900;
 }
 
+h3 {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
 /* top-nav */
 .top-nav {
   /* width: 24.375rem; */
@@ -82,7 +87,7 @@ h2 {
 }*/
 
 .categories-header {
-  display: inline-flex;
+  display: flex;
 }
 
 .side-nav-logo-container {
@@ -146,7 +151,7 @@ h2 {
 .categories-header {
   display: flex;
   justify-content: space-around;
-  margin: 1.5rem 0;
+  margin: 3rem 0;
 }
 
 .categories-container {
@@ -163,6 +168,31 @@ h2 {
 .categories-add-icon {
   width: 2rem;
   height: 1.8rem;
+}
+
+.categories-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.categories-content {
+  width: 90%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--grey);
+  margin-bottom: 0.875rem;
+}
+
+.categories-content h2 {
+  color: var(--font-grey);
+}
+
+.categories-content h3 {
+  color: var(--grey-dark);
 }
 
 /*** End of Pages Content ***/
