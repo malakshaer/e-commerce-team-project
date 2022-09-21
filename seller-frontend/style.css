@@ -158,8 +158,8 @@ h3 {
 /* categories page content */
 .categories-header {
   display: flex;
-  justify-content: space-around;
-  margin: 3rem 0;
+  justify-content: space-between;
+  padding: 2rem;
 }
 
 .categories-container {
