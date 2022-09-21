@@ -2,28 +2,22 @@
 
 include("../connection.php");
 
-$id = isset($_POST["id"]);
-$name = isset($_POST["name"]);
-$description = isset($_POST["description"]);
-$price =isset($_POST["price"]);
-$discount_price = isset($_POST["discount_price"]);
-$picture_img = isset($_POST["picture_img"]);
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+  $id = $_POST["id"];
+  
 
+  $sql = "DELETE FROM `products` WHERE `id` = $id";
+  $query =$mysqli->prepare($sql);
 
-$query = "DELETE FROM products WHERE (id, name,description,price,discount_price,picture_img) = (?,?,?,?,?,?)";
-$query = $mysqli->prepare($query);
-$query->bind_param("ssssss", $id, $name,$description,$price,$discount_price,$picture_img);
-$query->execute();
+  
+  $query->execute();
 
+  if($query){
+      echo "done successfully";
 
-if($query)
-{
-  echo "done successfully!";
-
-}
-else
-{
-  echo "Something went wrong!";
+  }else{
+      echo "something went wrong";
+  }
 }
 
 ?>
