@@ -2,8 +2,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const categoriesHeader = () => {
     var categoriesHeaders = "";
 
-    sellers.map(
-      (seller) =>
+    categories.map(
+      (category) =>
         (categoriesHeaders += `
           <div class="categories-container">
             <div class="categories-icon">
@@ -22,4 +22,4 @@ window.addEventListener("DOMContentLoaded", () => {
     categoriesHeader();
 });
 
-const sellers = [1];
+const categories = [1];

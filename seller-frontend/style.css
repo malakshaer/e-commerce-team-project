@@ -61,6 +61,7 @@ h3 {
   height: 3.75rem;
   border-radius: 50%;
   background-color: var(--primary-sharp);
+  cursor: pointer;
 }
 
 /* side-nav */
@@ -112,6 +113,7 @@ h3 {
   position: absolute;
   top: 25px;
   right: 25px;
+  cursor: pointer;
 }
 
 .side-nav-tab-container {
@@ -133,6 +135,7 @@ h3 {
   -ms-border-radius: 3rem 0 0 3rem;
   -o-border-radius: 3rem 0 0 3rem;
   gap: 1rem;
+  cursor: pointer;
 }
 
 .side-nav-tab img {
@@ -151,6 +154,7 @@ h3 {
   height: 100%;
   overflow: scroll;
 }
+
 /* categories page content */
 .categories-header {
   display: flex;
@@ -172,13 +176,17 @@ h3 {
 .categories-add-icon {
   width: 2rem;
   height: 1.8rem;
+  cursor: pointer;
 }
 
 .categories-content-container {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 2rem;
+  gap: 1rem;
 }
 
 .categories-content {
@@ -191,6 +199,7 @@ h3 {
   background-color: var(--grey);
   margin-bottom: 0.875rem;
   padding: 0 0.5rem;
+  flex: 1 1 22rem;
 }
 
 .categories-content h2 {
@@ -199,6 +208,7 @@ h3 {
 
 .categories-content h3 {
   color: var(--grey-dark);
+  cursor: pointer;
 }
 
 /*** End of Pages Content ***/

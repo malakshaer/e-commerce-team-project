@@ -2,8 +2,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const sideNavBar = () => {
     var sideNavBars = "";
 
-    sellers.map(
-      (seller) =>
+    navBars.map(
+      (navBar) =>
         (sideNavBars += `
           <div class="side-nav-logo-container">
             <div class="side-nav-logo">
@@ -48,4 +48,4 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("side-nav-bar").innerHTML = sideNavBar();
 });
 
-const sellers = [1];
+const navBars = [1];

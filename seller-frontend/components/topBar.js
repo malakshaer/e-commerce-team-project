@@ -2,8 +2,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const navBar = () => {
     var topNavBars = "";
 
-    sellers.map(
-      (seller) =>
+    navBars.map(
+      (navBar) =>
         (topNavBars += `
           <div class="hamburger-container">
             <img src="./Images/hamburger-icon.svg" alt="hamburger menu" />
@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <img src="Images/Logo-horizontal.svg" alt="Logo" />
           </div>
           <div class="profile-pic">
-            <img src="${seller.img_url}" alt="profile picture" />
+            <img src="${navBar.img_url}" alt="profile picture" />
           </div>
         `)
     );
@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("top-nav-bar").innerHTML = navBar();
 });
 
-const sellers = [
+const navBars = [
   {
     id: 1,
     name: "Timotheus",

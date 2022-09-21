@@ -2,11 +2,11 @@ window.addEventListener("DOMContentLoaded", () => {
   const categoriesContent = () => {
     var categoriesContents = "";
 
-    sellers.map(
-      (seller) =>
+    categories.map(
+      (category) =>
         (categoriesContents += `
         <div class="categories-content">
-          <h2>${seller.name}</h2>
+          <h2>${category.name}</h2>
           <h3>remove</h3>
         </div>
         `)
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("categories-content").innerHTML = categoriesContent();
 });
 
-const sellers = [
+const categories = [
   {
     name: "Site Furnishings",
   },
