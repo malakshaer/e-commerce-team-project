@@ -1,6 +1,6 @@
 <?php
 
-include_once("../connection.php");
+include_once("../../connection.php");
 
 $id = isset($_GET['id']);
 

@@ -1,6 +1,6 @@
 <?php
 
-include("../connection.php");
+include("../../connection.php");
 
 $product_id = $_POST["products_id"];
 $client_id = isset($_POST["user_types_id"]);
