@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
     categories.map(
       (category) =>
         (categoriesContents += `
-        <div class="categories-content">
+        <div class="categories-content pages-content">
           <h2>${category.name}</h2>
           <h3>remove</h3>
         </div>
