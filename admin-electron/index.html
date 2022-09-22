@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <link href="./styles.css" rel="stylesheet" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="nav-bar">
+        <div class="nav-icon">
+          <img src="./assets/sellers-icon.svg" alt="" />
+        </div>
+        <div class="nav-icon">
+          <img src="./assets/statistics-icon.svg" alt="" />
+        </div>
+        <div class="nav-icon">
+          <img src="./assets/clients-icon.svg" alt="" />
+        </div>
+      </div>
+      <div class="app-container">
+        <div class="top-bar" id="top-bar">
+          <div class="logo"><img alt="" src="./assets/logo.svg" /></div>
+          <div class="user-profile-picture">img</div>
+        </div>
+        <div class="app-body">body</div>
+      </div>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
