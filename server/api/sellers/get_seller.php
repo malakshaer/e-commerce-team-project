@@ -1,6 +1,6 @@
 <?php
 
-include("../connection.php");
+include("../../connection.php");
 
 
 $name = isset($_GET["name"]);
