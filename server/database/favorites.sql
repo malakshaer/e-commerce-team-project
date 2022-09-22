@@ -1,0 +1,15 @@
+insert into favorites (products_id, users_id, fav_date) values (1, 1, '10/16/2021');
+insert into favorites (products_id, users_id, fav_date) values (2, 2, '3/10/2022');
+insert into favorites (products_id, users_id, fav_date) values (3, 3, '7/5/2022');
+insert into favorites (products_id, users_id, fav_date) values (4, 4, '7/3/2022');
+insert into favorites (products_id, users_id, fav_date) values (5, 5, '11/17/2021');
+insert into favorites (products_id, users_id, fav_date) values (6, 6, '10/27/2021');
+insert into favorites (products_id, users_id, fav_date) values (7, 7, '6/5/2022');
+insert into favorites (products_id, users_id, fav_date) values (8, 8, '5/22/2022');
+insert into favorites (products_id, users_id, fav_date) values (9, 9, '3/10/2022');
+insert into favorites (products_id, users_id, fav_date) values (10, 10, '1/2/2022');
+insert into favorites (products_id, users_id, fav_date) values (11, 11, '7/3/2022');
+insert into favorites (products_id, users_id, fav_date) values (12, 12, '2/13/2022');
+insert into favorites (products_id, users_id, fav_date) values (13, 13, '3/30/2022');
+insert into favorites (products_id, users_id, fav_date) values (14, 14, '12/8/2021');
+insert into favorites (products_id, users_id, fav_date) values (15, 15, '11/18/2021');
