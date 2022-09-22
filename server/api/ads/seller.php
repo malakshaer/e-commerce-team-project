@@ -2,10 +2,10 @@
 
 include_once("../../connection.php");
 
-$seller_id = isset($_GET["user_types_id"]);
+$seller_id = $_GET["seller_id"];
 
-$query = "SELECT (picture_url,link) FROM ads WHERE users_id = $seller_id";
-$query = $mysqli->prepare($query);
+$query = $mysqli->prepare("SELECT * FROM ads WHERE id = ?");
+$query->bind_param('i', $seller_id);
 $query->execute();
 $arr = $query->get_result();
 
