@@ -10,20 +10,24 @@ img {
 }
 .main-container {
   display: flex;
+  position: relative;
 }
 /* Add styles here to customize the appearance of your app */
 .logo {
-  height: 2rem;
+  height: 1.8rem;
 }
 .top-bar {
   display: flex;
   justify-content: space-between;
   padding: 0.6rem 1.2rem;
   border-bottom: 3px solid #54549f;
+  align-items: center;
+  gap: 1rem;
 }
 .user-profile-picture {
   width: 3rem;
   height: 3rem;
+  min-width: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +48,6 @@ img {
   flex: 1 1;
 }
 .nav-bar {
-  width: 5rem;
   border-right: 3px solid #54549f;
   height: 100vh;
   padding: 6rem 0.6rem;
@@ -53,6 +56,8 @@ img {
   gap: 1rem;
 }
 .nav-icon {
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -62,4 +67,20 @@ img {
 }
 .nav-icon:hover {
   background: lightgray;
+}
+
+@media screen and (max-width: 25rem) {
+  .nav-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-right: none;
+    border-top: 3px solid #54549f;
+    height: auto;
+    padding: 0rem 0.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }
