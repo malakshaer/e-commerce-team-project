@@ -1,24 +1,25 @@
 <?php
 
 include("../../connection.php");
-   
-   if($_SERVER["REQUEST_METHOD"] == "GET")
-   {
 
-        $client_id = isset($_GET["user_types_id"]);
-        
-        
-        $query= "SELECT `o.id` FROM `orders` as o,`users` as u WHERE `o.user_id`=`u.id` = $client_id";
-        
-        $res = $mysqli -> query($query);
 
-        if($res)
-        {
-        echo "Data inserted into the database successfully!";
-        }
-        else
-        {
-        echo "Something went wrong!<BR>";
-        }
+    $order_id = $_GET["order_id"];
+
+    $query = $mysqli->prepare("SELECT * FROM products  WHERE id = ?");
+    $query->bind_param('i', $order_id);
+    $query->execute();
+    $array = $query->get_result();
+
+    $response = [];
+
+    while($value = $array->fetch_assoc()){
+        $response[] = $value;
+    };
+
+    if($response){
+        echo json_encode($response); 
+    }else{
+        echo "error";
     }
+
 ?>
