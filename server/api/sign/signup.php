@@ -9,9 +9,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $birthday =$_POST["birthday"];
 
     $passHash = hash("sha256", $_POST["password"]);
-    $password .= "a";
+    $passHash .= "a";
     $query = $mysqli->prepare("INSERT INTO users (`name`,`email`, `password`,`birthday`) VALUES (? ,?, ?, ?)");
-    $query->bind_param("ssss", $name, $email,$password,$birthday);
+    $query->bind_param("ssss", $name, $email,$passHash,$birthday);
     $query->execute();
 
 
