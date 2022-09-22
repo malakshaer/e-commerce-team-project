@@ -208,6 +208,23 @@ h3 {
   cursor: pointer;
 }
 
+.pages-select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.pages-select-container select {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 2rem;
+  margin: 0.1rem;
+  border-radius: 0.5rem;
+}
+/* End of Utilities */
+
 /*** End of Pages Content ***/
 
 @media screen and (min-width: 28rem) {
