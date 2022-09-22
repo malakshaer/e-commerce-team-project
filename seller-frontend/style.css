@@ -326,7 +326,7 @@ h3 {
 
 @media screen and (min-width: 60rem) {
   .page-layout-divider {
-    grid-template: 5.3125rem calc(100vh - 5.3125rem) / 30vw 70vw;
+    grid-template: 5.3125rem calc(100vh - 5.3125rem) / 22rem calc(100vw - 22rem);
   }
 
   .top-nav {
@@ -339,10 +339,6 @@ h3 {
 
   .side-nav-tab-container {
     padding: 0 1rem 0 2rem;
-  }
-
-  .side-nav {
-    max-width: 22rem;
   }
 
   .side-nav-logo {
