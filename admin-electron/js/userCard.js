@@ -1,5 +1,5 @@
 // data
-const users = [
+const sellers = [
   {
     id: 1,
     name: "Meryl Roberson",
@@ -52,7 +52,7 @@ const users = [
   },
 ];
 
-const userCard = () => {
+const userCard = (users) => {
   var usersList = "";
   users.map(
     (user, i) =>
@@ -68,14 +68,5 @@ const userCard = () => {
   );
   return usersList;
 };
-console.log(userCard());
 // inserting the document in the dom
-document.getElementById("users-list").innerHTML = userCard();
-
-// functioning each element
-const editSeller = document.querySelectorAll(".user-card-edit");
-
-editSeller.forEach((edit) => {
-  edit.addEventListener("click", () => alert(edit.id));
-  // instead of alert we are going to fetch
-});
+document.getElementById("users-list").innerHTML = userCard(sellers);
