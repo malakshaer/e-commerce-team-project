@@ -3,7 +3,20 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  text-decoration: unset;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: sans-serif;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: contain;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 img {
   max-width: 100%;
@@ -12,7 +25,7 @@ img {
   display: flex;
   position: relative;
 }
-/* Add styles here to customize the appearance of your app */
+/* Main layout */
 .logo {
   height: 1.8rem;
 }
@@ -43,9 +56,13 @@ img {
   display: flex;
   flex-direction: column;
   flex: 1 1;
+  overflow: hidden;
+  height: 100vh;
 }
 .app-body {
   flex: 1 1;
+  padding: 1rem;
+  overflow: auto;
 }
 .nav-bar {
   border-right: 3px solid #54549f;
@@ -54,10 +71,11 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background: white;
 }
 .nav-icon {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -77,10 +95,58 @@ img {
     border-right: none;
     border-top: 3px solid #54549f;
     height: auto;
-    padding: 0rem 0.6rem;
+    padding: 0rem 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
   }
+}
+
+/* lists */
+
+.sellers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding: 2rem 0rem;
+}
+/* user card */
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.6rem;
+  border: 1px solid #eee;
+  border-radius: 1.2rem;
+  -webkit-border-radius: 1.2rem;
+  -moz-border-radius: 1.2rem;
+  -ms-border-radius: 1.2rem;
+  -o-border-radius: 1.2rem;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  font-size: 1.2rem;
+  flex: 1 1 20rem;
+}
+.user-card:hover {
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.user-card-img-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.user-card-img-container {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #999999;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.user-card-edit {
+  cursor: pointer;
 }

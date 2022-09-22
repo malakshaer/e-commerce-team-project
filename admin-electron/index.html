@@ -7,7 +7,13 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Nunito"
+    />
     <link href="./styles.css" rel="stylesheet" />
+
     <title>Admin</title>
   </head>
   <body>
@@ -18,11 +24,16 @@
           <div class="logo"><img alt="" src="./assets/logo.svg" /></div>
           <div class="user-profile-picture">img</div>
         </div>
-        <div class="app-body">body</div>
+        <div class="app-body" id="app-body">
+          <h2 id="title">Sellers</h2>
+          <div id="users-list" class="sellers-list"></div>
+        </div>
       </div>
     </div>
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
     <script src="./js/navBar.js"></script>
+    <script src="./js/userCard.js"></script>
+    <script src="./js/navBarActions.js"></script>
   </body>
 </html>
