@@ -2,10 +2,10 @@
 
 include("../../connection.php");
 
-$client_id = $_GET["user_types_id"];
+$ads_id = $_GET["ads_id"];
 
-$query = "SELECT * FROM `ads` WHERE users_id = $client_id";
-$query = $mysqli->prepare($query);
+$query = $mysqli->prepare("SELECT * FROM ads WHERE id = ?");
+$query->bind_param('i', $ads_id);
 $query->execute();
 
 $arr = $query->get_result();
