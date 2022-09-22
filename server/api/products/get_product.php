@@ -8,23 +8,16 @@ $query = "SELECT * FROM products WHERE `id` = ? ";
 $query = $mysqli->prepare($query);
 $query->bind_param('s', $id);
 $query->execute();
-$arr = $query->get_result();
 
-$arr =[];
-while($value = $array->fetch_assoc()){
-    $arr[] = $value;
+$array = $query->get_result();
+
+$response = [];
+
+while($a = $array->fetch_assoc()){
+    $response[] = $a;
 }
 
-$result =[];
-if($arr)
-{
-  echo "done successfully!";
-
-}
-else
-{
-  echo "Something went wrong!";
-}
-echo json_encode($result);
+$json = json_encode($response);
+echo $json;
 
 ?>
