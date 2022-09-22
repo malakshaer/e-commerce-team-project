@@ -1,6 +1,6 @@
 <?php
 
-include("../connection.php");
+include("../../connection.php");
 
 
 $ban = isset($_POST["is_ban"]);
