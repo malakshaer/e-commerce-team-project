@@ -1,6 +1,6 @@
 <?php 
 
-include("./server/connection.php");
+include("../../connection.php");
 
 $email = isset($_POST['email']);
 $password = isset($_POST['password']);
