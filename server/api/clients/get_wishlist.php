@@ -2,11 +2,10 @@
 
 include("../../connection.php");
    
-$client_id = $_GET["client_id"];
+$wish_id = $_GET["wish_id"];
 
-$query= "SELECT * FROM products  WHERE id = ?";
-$query = $mysqli->prepare($query);
-$query->bind_param('i', $client_id);
+$query = $mysqli->prepare("SELECT * FROM products  WHERE id = ?");
+$query->bind_param('i', $wish_id);
 $query->execute();
 $array = $query->get_result();
 
