@@ -2,10 +2,10 @@
 include("../../connection.php");
 
 
-if($_SERVER["REQUEST_METHOD"] == "GET"){
+if(isset($_GET["message"]) && isset($_GET["sender_id"]) && isset($_GET["receiver_id"]) && $_GET["message_date"]){
     $message = $_GET["message"];
-    $sender_id = isset($_GET["sender_id"]);
-    $receiver_id = isset($_GET["receiver_id"]);
+    $sender_id = $_GET["sender_id"];
+    $receiver_id = $_GET["receiver_id"];
     $message_date = $_GET["message_date"];
     
 
