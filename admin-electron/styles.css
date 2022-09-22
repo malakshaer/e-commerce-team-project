@@ -150,3 +150,18 @@ img {
 .user-card-edit {
   cursor: pointer;
 }
+
+/* label */
+
+.label-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label-with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
