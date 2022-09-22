@@ -270,6 +270,29 @@ h3 {
   width: 1.5rem;
 }
 
+/* Ads page */
+.ads-content {
+  flex-direction: column;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  height: 20rem;
+}
+
+.ads-content-img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.ads-content-img img {
+  width: 12rem;
+  height: 12rem;
+}
+
+/* .ads-content-url span {
+  font-size: 1.5rem;
+  font-weight: 900;
+} */
+
 /*** End of Pages Content ***/
 
 @media screen and (min-width: 28rem) {
