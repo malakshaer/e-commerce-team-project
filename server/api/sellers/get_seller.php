@@ -1,33 +1,24 @@
 <?php
-
 include("../../connection.php");
 
+$seller_id = $_GET["seller_id"];
 
-$name = isset($_GET["name"]);
-$email = isset($_GET["email"]);
-$birthday =isset($_GET["birthday"]);
-$join_date =isset($_GET["join_date"]);
-$profile_img =isset($_GET["profile_img"]);
-$seller_id = isset($_GET["user_type_id"]);
-
-$query = "SELECT * FROM users  WHERE `id` = $seller_id";
-$query = $mysqli->prepare($query);
-$query->bind_param('s', $id);
+$query = $mysqli->prepare("SELECT * FROM users  WHERE id = ?");
+$query->bind_param('i', $seller_id);
 $query->execute();
-$arr = $query->get_result();
+$array = $query->get_result();
 
+$response = [];
 
-$result =[];
-while($value = $arr->fetch_assoc()){
-    $result[] = $value;
+while($value = $array->fetch_assoc()){
+    $response[] = $value;
 };
 
-if(!$result){
-    $response["exist"] = FALSE;
+if($response){
+    echo json_encode($response); 
 }else{
-    $response["exist"] = TRUE;
+    echo "error";
 }
 
-echo json_encode($response);
 
 ?>
