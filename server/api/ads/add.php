@@ -1,6 +1,6 @@
 <?php
 
-include("../connection.php");
+include("../../connection.php");
 
 
 $pic_url = $_POST["picture_id"];
