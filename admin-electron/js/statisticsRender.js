@@ -53,31 +53,31 @@ const tabComponent = (users, type) => {
 
 // switch betweeen statistics period
 const switcher = (type) => {
-  document.getElementById(`${type}-week-stat`).addEventListener("click", () => {
+  // week stats
+  document.getElementById(`${type}-week-stat`).onclick = () => {
     document.getElementById(`${type}-week-stat`).classList.add("active-tab");
     document
       .getElementById(`${type}-month-stat`)
       .classList.remove("active-tab");
     document.getElementById(`${type}-year-stat`).classList.remove("active-tab");
-  });
-  document
-    .getElementById(`${type}-month-stat`)
-    .addEventListener("click", () => {
-      document
-        .getElementById(`${type}-week-stat`)
-        .classList.remove("active-tab");
-      document.getElementById(`${type}-month-stat`).classList.add("active-tab");
-      document
-        .getElementById(`${type}-year-stat`)
-        .classList.remove("active-tab");
-    });
-  document.getElementById(`${type}-year-stat`).addEventListener("click", () => {
+  };
+
+  // month stats
+
+  document.getElementById(`${type}-month-stat`).onclick = () => {
+    document.getElementById(`${type}-week-stat`).classList.remove("active-tab");
+    document.getElementById(`${type}-month-stat`).classList.add("active-tab");
+    document.getElementById(`${type}-year-stat`).classList.remove("active-tab");
+  };
+  // year stats
+
+  document.getElementById(`${type}-year-stat`).onclick = () => {
     document.getElementById(`${type}-week-stat`).classList.remove("active-tab");
     document
       .getElementById(`${type}-month-stat`)
       .classList.remove("active-tab");
     document.getElementById(`${type}-year-stat`).classList.add("active-tab");
-  });
+  };
 };
 
 // main function
@@ -101,4 +101,5 @@ const statisticRender = () => {
 
   switcher("sellers");
   switcher("clients");
+  loopingOverUserCards();
 };

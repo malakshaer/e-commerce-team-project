@@ -14,3 +14,13 @@ const userCard = (users, option = "Edit") => {
   );
   return usersList;
 };
+
+const loopingOverUserCards = () => {
+  // functioning each element
+  let editUser = document.querySelectorAll(".user-card-edit");
+
+  editUser.forEach((edit) => {
+    edit.onclick = () => alert(edit.id);
+    // instead of alert we are going to fetch
+  });
+};
