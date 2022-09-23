@@ -20,6 +20,7 @@
 }
 img {
   max-width: 100%;
+  width: 100%;
 }
 .main-container {
   display: flex;
@@ -171,7 +172,7 @@ img {
   height: 4rem;
   min-width: 4rem;
   border-radius: 50%;
-  background-color: #999999;
+  background-color: #eee;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -317,7 +318,7 @@ img {
   width: 100%;
 }
 
-.inputs-container input {
+input {
   background-color: #f8f8f8;
   font-size: 1.2rem;
   box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.25);
@@ -350,4 +351,76 @@ img {
 
 .display-none {
   display: none;
+}
+
+/* edit page */
+
+.edit-page {
+  padding: 2rem;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.edit-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.edit-user-profile-img {
+  width: 10rem;
+  height: 10rem;
+  background: #fbfbfb;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.label-img {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
+}
+.img-label {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #eee;
+  overflow: hidden;
+  padding: 0;
+  z-index: 1;
+}
+
+.file-input {
+  position: absolute;
+  z-index: -1;
+  width: 5rem;
+}
+
+.ban-btn {
+  background: #e21a58;
+  border: 1px solid #e21a58;
+  color: #fff;
+  padding: 0.2rem 1rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+.unban {
+  background: white;
+  color: #e21a58;
+  cursor: pointer;
 }

@@ -1,5 +1,5 @@
 const signUp = () => {
-  return `<div class="sign-container"  id='sign-up-container'>
+  return `<div class="sign-container display-none"  id='sign-up-container'>
     <h1>Create new account</h1>
     <div class="inputs-container">
       <input placeholder="Full name" id='name' />
@@ -26,7 +26,7 @@ const validateCode = () => {
 };
 
 const signIn = () => {
-  return `<div class="sign-container display-none" id='sign-in-container'>
+  return `<div class="sign-container " id='sign-in-container'>
       <h1>Sign in to your account</h1>
       <div class="inputs-container">
         <input placeholder="Email" id='mail' />
