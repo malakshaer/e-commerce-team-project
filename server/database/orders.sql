@@ -1,0 +1,15 @@
+insert into orders (id, order_date, users_id) values (1, '10/30/2021', 1);
+insert into orders (id, order_date, users_id) values (2, '1/7/2022', 2);
+insert into orders (id, order_date, users_id) values (3, '2/5/2022', 3);
+insert into orders (id, order_date, users_id) values (4, '9/2/2022', 4);
+insert into orders (id, order_date, users_id) values (5, '5/6/2022', 5);
+insert into orders (id, order_date, users_id) values (6, '1/4/2022', 6);
+insert into orders (id, order_date, users_id) values (7, '5/6/2022', 7);
+insert into orders (id, order_date, users_id) values (8, '5/14/2022', 8);
+insert into orders (id, order_date, users_id) values (9, '10/15/2021', 9);
+insert into orders (id, order_date, users_id) values (10, '4/18/2022', 10);
+insert into orders (id, order_date, users_id) values (11, '7/17/2022', 11);
+insert into orders (id, order_date, users_id) values (12, '9/27/2021', 12);
+insert into orders (id, order_date, users_id) values (13, '1/8/2022', 13);
+insert into orders (id, order_date, users_id) values (14, '12/8/2021', 14);
+insert into orders (id, order_date, users_id) values (15, '1/20/2022', 15);

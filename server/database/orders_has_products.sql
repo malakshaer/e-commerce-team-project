@@ -1,0 +1,15 @@
+insert into orders_has_products (orders_id, products_id, quantity) values (1, 1, '21');
+insert into orders_has_products (orders_id, products_id, quantity) values (2, 2, '44307');
+insert into orders_has_products (orders_id, products_id, quantity) values (3, 3, '3217');
+insert into orders_has_products (orders_id, products_id, quantity) values (4, 4, '35');
+insert into orders_has_products (orders_id, products_id, quantity) values (5, 5, '7');
+insert into orders_has_products (orders_id, products_id, quantity) values (6, 6, '829');
+insert into orders_has_products (orders_id, products_id, quantity) values (7, 7, '0');
+insert into orders_has_products (orders_id, products_id, quantity) values (8, 8, '02249');
+insert into orders_has_products (orders_id, products_id, quantity) values (9, 9, '7405');
+insert into orders_has_products (orders_id, products_id, quantity) values (10, 10, '902');
+insert into orders_has_products (orders_id, products_id, quantity) values (11, 11, '45979');
+insert into orders_has_products (orders_id, products_id, quantity) values (12, 12, '4');
+insert into orders_has_products (orders_id, products_id, quantity) values (13, 13, '839');
+insert into orders_has_products (orders_id, products_id, quantity) values (14, 14, '407');
+insert into orders_has_products (orders_id, products_id, quantity) values (15, 15, '472');

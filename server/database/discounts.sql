@@ -1,0 +1,15 @@
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (1, '0NBT0ZZ', '59-772-9386', 75, 26, '6/28/2022', 1);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (2, '4A143B0', '82-315-3309', 2, 54, '11/19/2021', 2);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (3, '0PR93KZ', '47-290-8237', 72, 37, '2/4/2022', 3);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (4, '06VB3ZZ', '05-395-4636', 43, 64, '3/3/2022', 4);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (5, 'B8271ZZ', '81-482-3446', 97, 6, '6/23/2022', 5);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (6, '0NR637Z', '30-601-6506', 85, 50, '10/11/2021', 6);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (7, '0FV84DZ', '44-333-5111', 39, 89, '5/7/2022', 7);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (8, '0RQX4ZZ', '30-534-9598', 22, 52, '8/19/2022', 8);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (9, '0TV43ZZ', '69-531-9105', 31, 54, '8/15/2022', 9);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (10, '0UQ67ZZ', '85-219-2107', 89, 37, '7/26/2022', 10);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (11, '037Y466', '73-508-1392', 97, 47, '12/23/2021', 11);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (12, '04100A7', '62-981-7925', 53, 66, '3/19/2022', 12);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (13, '0WF94ZZ', '21-638-4312', 44, 57, '11/26/2021', 13);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (14, '09010JZ', '30-094-3850', 75, 39, '10/13/2021', 14);
+insert into discounts (id, code, percentage, use_time, count_times, discount_date, users_id) values (15, '099W3ZZ', '02-596-6560', 51, 85, '3/29/2022', 15);
