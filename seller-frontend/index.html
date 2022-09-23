@@ -6,30 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spurce Trolley Seller</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./components/categories.js"></script>
+    <script src="./components/topBar.js"></script>
+    <!-- <script src="./components/categories.js"></script>
+    <script src="./components/categoriesSelect.js"></script>
+    <script src="./components/products.js"></script> -->
+    <script src="./components/ads.js"></script>
   </head>
   <body>
     <!-- Start of layout divider -->
     <div class="page-layout-divider">
       <!-- Start of top-nav -->
-      <div class="top-nav" id="top-nav-bar">
-        <div class="hamburger-container">
-          <img src="./Images/hamburger-icon.svg" alt="hamburger menu" />
-        </div>
-        <div class="top-nav-logo-container">
-          <img src="Images/Logo-horizontal.svg" alt="Logo" />
-        </div>
-        <div class="profile-pic">
-          <!-- <img src="${seller.img_url}" alt="profile picture" /> -->
-        </div>
-      </div>
+      <div class="top-nav" id="top-nav-bar"></div>
       <!-- End of top-nav -->
 
       <!-- Start of side-nav -->
       <div class="side-nav" id="side-nav-bar">
         <div class="side-nav-logo-container">
           <div class="side-nav-logo">
-            <img src="./Images/Logo.svg" alt="Logo" />
+            <img src="./Images/logo.svg" alt="Logo" />
           </div>
           <div class="side-nav-close-btn">
             <img src="./Images/x-icon.svg" alt="close icon" />
@@ -70,31 +64,45 @@
       <!-- End of side-nav -->
 
       <!-- Start of pages content -->
-      <div class="pages-content">
-        <!-- Start of categories -->
-        <!-- Start of categories header -->
-        <div class="categories-header" id="categories-header-id">
-          <div class="categories-container">
-            <div class="categories-icon">
-              <img src="Images/categories-icon.svg" alt="Categories Icon" />
+      <div class="pages-content-wrapper">
+        <!-- Start of Ads -->
+        <!-- Start of Ads header -->
+        <div
+          class="ads-header-container pages-header-container"
+          id="ads-header-id"
+        >
+          <div class="ads-header pages-header">
+            <div class="ads-icon pages-header-icon">
+              <img src="Images/Ads-icon.svg" alt="Categories Icon" />
             </div>
-            <h2>Categories</h2>
+            <h2>Published Ads</h2>
           </div>
-          <div class="categories-add-icon">
+          <div class="ads-add-icon pages-header-add-icon">
             <img src="./Images/add-icon.svg" alt="Add Icon" />
           </div>
         </div>
-        <!-- End of categories header -->
+        <!-- End of Ads header -->
 
-        <!-- Start of categories content -->
-        <div class="categories-content-container" id="categories-content">
-          <!-- <div class="categories-content">
-            <h2>Categories name</h2>
+        <!-- Start of Ads content -->
+        <div
+          class="ads-content-container pages-content-container"
+          id="ads-content"
+        >
+          <div class="ads-content pages-content">
+            <div class="ads-content-img">
+              <!-- <img src="./Images/random.svg" alt="Ads Image" /> -->
+            </div>
+            <div class="ads-content-url">
+              <p>
+                <span> Link: </span>
+                <a href="#">https://www.prucetrolly.com</a>
+              </p>
+            </div>
             <h3>remove</h3>
-          </div> -->
+          </div>
         </div>
-        <!-- End of categories content -->
-        <!-- End of Categories -->
+        <!-- End of Ads content -->
+        <!-- End of Ads -->
       </div>
       <!-- End of pages content -->
     </div>

@@ -1,22 +1,20 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const categoriesContent = () => {
-    var categoriesContents = "";
+  const categoriesSelect = () => {
+    var categoriesSelects = "";
 
-    categories.map(
-      (category) =>
-        (categoriesContents += `
-        <div class="categories-content pages-content">
-          <h2>${category.name}</h2>
-          <h3>remove</h3>
-        </div>
+    options.map(
+      (option) =>
+        (categoriesSelects += `
+          <option value="${option.name}">${option.name}</option>
         `)
     );
-    return categoriesContents;
+    return categoriesSelects;
   };
-  document.getElementById("categories-content").innerHTML = categoriesContent();
+  document.getElementById("categories-select-id").innerHTML =
+    categoriesSelect();
 });
 
-const categories = [
+const options = [
   {
     name: "Site Furnishings",
   },

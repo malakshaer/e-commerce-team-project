@@ -5,13 +5,13 @@ window.addEventListener("DOMContentLoaded", () => {
     categories.map(
       (category) =>
         (categoriesHeaders += `
-          <div class="categories-container">
-            <div class="categories-icon">
+          <div class="categories-header pages-header">
+            <div class="categories-icon pages-header-icon">
               <img src="Images/categories-icon.svg" alt="Categories Icon" />
             </div>
             <h2>Categories</h2>
           </div>
-          <div class="categories-add-icon">
+          <div class="categories-add-icon pages-header-add-icon">
             <img src="./Images/add-icon.svg" alt="Add Icon" />
           </div>
         `)
