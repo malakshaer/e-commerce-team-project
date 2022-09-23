@@ -337,6 +337,32 @@ h3 {
   color: var(--secondary);
 }
 
+/* Inbox page */
+.inbox-content-container {
+  flex-flow: column nowrap;
+}
+.inbox-content {
+  border-radius: 1rem;
+  justify-content: flex-start;
+  padding: 1rem;
+  gap: 5rem;
+  flex: content;
+  cursor: pointer;
+}
+
+.inbox-content-img,
+.inbox-content-img img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.inbox-content-username {
+  color: var(--secondary);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
 /*** End of Pages Content ***/
 
 @media screen and (min-width: 28rem) {
