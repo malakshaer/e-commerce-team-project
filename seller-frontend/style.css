@@ -293,6 +293,15 @@ h3 {
   font-weight: 900;
 } */
 
+/* Discount page */
+.discount-content {
+  justify-content: space-evenly;
+}
+
+.discount-expiry {
+  color: var(--secondary);
+}
+
 /*** End of Pages Content ***/
 
 @media screen and (min-width: 28rem) {
