@@ -14,7 +14,9 @@
     <!-- <script src="./components/discount.js"></script> -->
     <!-- <script src="./components/revenueFilter.js"></script>
     <script src="./components/revenueResult.js"></script> -->
-    <script src="./components/inbox.js"></script>
+    <!-- <script src="./components/inbox.js"></script> -->
+    <script src="./components/chat.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- Start of layout divider -->
@@ -92,30 +94,20 @@
           class="chat-content-container pages-content-container"
           id="chat-content-id"
         >
-          <div class="chat-content pages-content">
+          <div class="chat-content pages-content" id="chat-box">
             <div class="chat-message">
-              <div class="chat-message-text">
+              <div class="chat-message-text left">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
                 commodi aut, vero sapiente placeat nostrum consequatur sunt.
                 Totam nisi autem itaque provident veniam dignissimos, hic quas
                 tempora earum deserunt nulla.
               </div>
-              <div class="chat-message-date">9/9/2019</div>
-            </div>
-
-            <div class="chat-message">
-              <div class="chat-message-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                commodi aut, vero sapiente placeat nostrum consequatur sunt.
-                Totam nisi autem itaque provident veniam dignissimos, hic quas
-                tempora earum deserunt nulla.
-              </div>
-              <div class="chat-message-date">9/9/2019</div>
+              <div class="chat-message-date left">9/9/2019</div>
             </div>
           </div>
           <div class="chat-input pages-content">
-            <textarea name="" id="chat-input"></textarea>
-            <div class="chat-send-img">
+            <textarea name="input" id="chat-input"></textarea>
+            <div class="chat-send-img" id="send-input">
               <img src="./Images/send-icon.svg" alt="Send Icon" />
             </div>
           </div>
