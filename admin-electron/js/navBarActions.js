@@ -3,7 +3,7 @@ const navStatisticsBtn = document.getElementById("nav-statistics-btn");
 const navClientsBtn = document.getElementById("nav-clients-btn");
 
 // the first shown in the body
-document.getElementById("app-body").innerHTML = uList("Sellers");
+document.getElementById("app-body").innerHTML = uList("Sellers", "+");
 document.getElementById("users-list").innerHTML = userCard(sellers);
 
 loopingOverUserCards();
