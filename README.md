@@ -93,11 +93,20 @@ Deadline: Sunday 25th at 11:59 PM. Deliverable: One Repo Link (containing four f
 
 ---
 
+<style>
+img[src$="center"]
+{
+    display:block;
+    float:none;
+    margin: 0 auto;
+}
+</style>
+
 ## Project Process
 
 #### Stage 1: Creating ER diagram for the project
 
-![](./server/er_diagram/tables.png)
+![](./server/er_diagram/tables.png?style=center)
 
 ---
 
@@ -105,23 +114,23 @@ Deadline: Sunday 25th at 11:59 PM. Deliverable: One Repo Link (containing four f
 
 ##### Wireframe:
 
-![](./src/wireframe.png)
+![](./src/wireframe.png?style=center)
 
-![](./src/wireframe-1.png)
+![](./src/wireframe-1.png?style=center)
 
 ##### Mockup:
 
-![](./src/mockup.png)
+![](./src/mockup.png?style=center)
 
-![](./src/mockup-1.png)
+![](./src/mockup-1.png?style=center)
 
-![](./src/mockup-2.png)
+![](./src/mockup-2.png?style=center)
 
 ---
 
 #### Stage 3: Creating List of API's needed for the project
 
-![](./src/api-list.PNG)
+![](./src/api-list.png?style=center)
 
 ---
 
