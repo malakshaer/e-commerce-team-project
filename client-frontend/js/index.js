@@ -37,3 +37,92 @@ function slideShow() {
   }
   setTimeout("slideShow()", imgDuration);
 }
+
+const homeRender = () => {
+  document.getElementById("app-body").innerHTML = `
+    <!-- Start slideshow section -->
+    <section class="slideshow" >
+      <img class="image" id="image1" />
+    </section>
+    <!-- End slideshow section -->
+    <!-- start ads section -->
+    <section class="products" id="products-list"></section>
+    <!-- end ads section -->`;
+  slideShow();
+  document.getElementById("products-list").innerHTML = productCard(products);
+  products.map(
+    (product, i) =>
+      (document.getElementById(product.id).onclick = () => {
+        alert(product.id);
+      })
+  );
+};
+
+const sellerRender = () => {
+  document.getElementById("app-body").innerHTML = ` <div class="search">
+  <input
+          class="input search-input"
+          type="text"
+          name=""
+          id=""
+          placeholder="Search Sellers"
+        />
+    <button class="button search-btn">Search</button></div>
+  <section class="sellers" id="sellers-list"></section>`;
+
+  document.getElementById("sellers-list").innerHTML = sellerCard();
+  console.log(document.querySelectorAll(".seller-section"));
+  sellers.map((seller) => {
+    document.getElementById(seller.name).innerHTML = productCard(
+      products.filter((item) => item.seller_name == seller.name).slice(0, 4)
+    );
+  });
+  console.log(sellers);
+  sellers.map(
+    (seller) =>
+      (document.getElementById(`seller-${seller.id}`).onclick = () => {
+        alert(seller.id);
+      })
+  );
+};
+
+const searchRender = () => {
+  document.getElementById("app-body").innerHTML = `
+    <div class="search">
+    <input
+            class="input search-input"
+            type="text"
+            name=""
+            id=""
+            placeholder="Search Sellers"
+          />
+      <button class="button search-btn">Search</button></div>
+    <!-- start ads section -->
+    <section class="products" id="products-list"></section>
+    <!-- end ads section -->`;
+  document.getElementById("products-list").innerHTML = productCard(products);
+  products.map(
+    (product, i) =>
+      (document.getElementById(product.id).onclick = () => {
+        alert(product.id);
+      })
+  );
+};
+const cartRender = () => {
+  document.getElementById("app-body").innerHTML = `
+<h1>Your Cart<h1>
+<div class= cart-content>
+
+    <section class="products" id="checkout-list"></section>
+    <section id ="checkout"></section>
+    <div>`;
+  document.getElementById("checkout-list").innerHTML = checkoutCard(products);
+  document.getElementById("checkout").innerHTML = checkout();
+
+  products.map(
+    (product, i) =>
+      (document.getElementById(product.id).onclick = () => {
+        alert(product.id);
+      })
+  );
+};

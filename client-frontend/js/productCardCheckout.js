@@ -1,4 +1,4 @@
-const checkoutCard = () => {
+const checkoutCard = (products) => {
   var productList = "";
   products.map(
     (product, i) =>
@@ -55,4 +55,4 @@ const checkoutCard = () => {
   return productList;
 };
 
-document.getElementById("checkout_cards").innerHTML = checkoutCard();
+document.getElementById("checkout_cards").innerHTML = checkoutCard(products);

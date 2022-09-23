@@ -57,6 +57,7 @@ navPersonBtn.addEventListener("click", () => {
   navMoreBtn.children[1].style.color = "#54549f";
 });
 navSearchBtn.addEventListener("click", () => {
+  searchRender();
   navHomeBtn.children[0].src = "./images/home-icon.svg";
   navHomeBtn.children[1].style.color = "#54549f";
   navPersonBtn.children[0].src = "./images/person-icon.svg";
@@ -69,6 +70,7 @@ navSearchBtn.addEventListener("click", () => {
   navMoreBtn.children[1].style.color = "#54549f";
 });
 navCartBtn.addEventListener("click", () => {
+  cartRender();
   navHomeBtn.children[0].src = "./images/home-icon.svg";
   navHomeBtn.children[1].style.color = "#54549f";
   navPersonBtn.children[0].src = "./images/person-icon.svg";
