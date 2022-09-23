@@ -62,5 +62,6 @@ document.getElementById("sign-up-btn").onclick = () => {
 };
 
 document.getElementById("sign-in-btn").onclick = () => {
-  window.location.replace("/admin-electron/admin.html");
+  document.getElementById("main-container").classList.remove("display-none");
+  document.getElementById("sign-container").classList.add("display-none");
 };

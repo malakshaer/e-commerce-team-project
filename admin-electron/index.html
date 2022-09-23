@@ -14,16 +14,47 @@
     />
     <link href="./styles.css" rel="stylesheet" />
 
-    <title>Sign</title>
+    <title>Admin</title>
   </head>
   <body>
-    <div>
+    <div id="sign-container">
       <div class="sign-top-bar">
         <div class="logo"><img alt="" src="./assets/logo.svg" /></div>
       </div>
-      <div class="sign-body" id="sign-body">
-      
+      <div class="sign-body" id="sign-body"></div>
     </div>
+
+    <div class="main-container display-none" id="main-container">
+      <div class="nav-bar" id="nav-bar"></div>
+      <div class="app-container">
+        <div class="top-bar" id="top-bar">
+          <div class="logo"><img alt="" src="./assets/logo.svg" /></div>
+          <div class="user-profile-picture" id="user-log-menu">
+            <img alt="" src="./assets/admin.png" />
+          </div>
+          <div class="profile-menu display-none" id="profile-menu">
+            <div class="profile-menu-option" id="profile-btn">Profile</div>
+            <div class="profile-menu-option" id="logout">Logout</div>
+          </div>
+        </div>
+        <div class="app-body" id="app-body">
+          <!-- your javascript code is changing this -->
+        </div>
+      </div>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+
+    <script src="./js/data.js"></script>
+    <script src="./js/navBar.js"></script>
+    <script src="./js/userListContainer.js"></script>
+    <script src="./js/userRender.js"></script>
+    <script src="./js/userCard.js"></script>
+    <script src="./js/sellersRender.js"></script>
+    <script src="./js/clientsRender.js"></script>
+    <script src="./js/statisticsRender.js"></script>
+    <script src="./js/navBarActions.js"></script>
+    <script src="./js/render.js"></script>
     <script src="./js/sign.js"></script>
   </body>
 </html>

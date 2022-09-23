@@ -1,5 +1,6 @@
 document.getElementById("logout").onclick = () => {
-  window.location.replace("/admin-electron/index.html");
+  document.getElementById("sign-container").classList.toggle("display-none");
+  document.getElementById("main-container").classList.toggle("display-none");
 };
 
 document.getElementById("user-log-menu").onclick = () => {
