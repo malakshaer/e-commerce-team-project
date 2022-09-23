@@ -53,6 +53,13 @@ const users = [
 
 const button = document.getElementById("send-input");
 button.addEventListener("click", sendInput);
+const userInput = document.querySelector("#chat-input");
+userInput.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    sendInput();
+    userInput.value = "";
+  }
+});
 let chatMessages = "";
 const chatMessage = () => {
   chatMessages = "";
@@ -73,9 +80,6 @@ const chatMessage = () => {
 document.getElementById("chat-box").innerHTML = chatMessage();
 
 function sendInput() {
-  const userInput = document.querySelector("#chat-input");
-
-  console.log(userInput.value);
   chatMessages += `
     <div class="chat-message right">
       <div class="chat-message-text right">
