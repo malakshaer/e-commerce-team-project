@@ -296,6 +296,7 @@ h3 {
 /* Discount page */
 .discount-content {
   justify-content: space-evenly;
+  border-radius: 1rem;
 }
 
 .discount-expiry {
