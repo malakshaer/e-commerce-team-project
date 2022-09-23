@@ -1,4 +1,4 @@
-const userCard = (users) => {
+const userCard = (users, option = "Edit") => {
   var usersList = "";
   users.map(
     (user, i) =>
@@ -9,10 +9,8 @@ const userCard = (users) => {
                   </div>
                   <p class="user-card-name">${user.name}</p>
                 </div>
-                <p href=""  class="user-card-edit" id='${user.id}'>Edit</p>
+                <p href=""  class="user-card-edit" id='${user.id}'>${option}</p>
               </div>`)
   );
   return usersList;
 };
-// inserting the document in the dom
-document.getElementById("users-list").innerHTML = userCard(sellers);
