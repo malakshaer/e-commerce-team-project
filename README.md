@@ -10,8 +10,6 @@ Group Project II: E-Commerce Build your own-designed E-Commerce Project followin
   4- Admin shall be able view general statistics using graphs (Best seller of the week / month / year, Top Client per week/ month / year, total number of products on the website, total number of sellers, total number of sellers, etc. )
   5- Admins shall have a Desktop App built using Electron.js
 
-  <br/>
-
 - Client:
 
   1- Client shall be able to login / register on the website Client shall be able to surf the website and check posted products / items.
@@ -26,9 +24,8 @@ Group Project II: E-Commerce Build your own-designed E-Commerce Project followin
   10- Clients shall be able to chat (not necessarily live) with the sellers.
   11- Clients shall be able to reset password (by sending it by email) 12- Client shall have a web interface (typical website).
 
-<br/>
-
 - Seller:
+
   1- Seller shall be able to add categories.
   2- Seller shall be able to add products under category.
   3- Seller shall be able to edit / delete products.
