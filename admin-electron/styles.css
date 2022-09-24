@@ -500,3 +500,8 @@ input {
 .close-pop-up {
   cursor: pointer;
 }
+
+canvas {
+  width: 100%;
+  padding: calc(2rem + 3vw) 2rem;
+}

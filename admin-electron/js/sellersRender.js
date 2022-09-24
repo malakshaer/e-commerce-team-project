@@ -3,4 +3,5 @@ const sellersRender = () => {
   document.getElementById("users-list").innerHTML = userCard(sellers);
 
   loopingOverUserCards();
+  setpopUp();
 };

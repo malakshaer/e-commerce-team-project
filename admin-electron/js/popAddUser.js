@@ -13,12 +13,16 @@ const popAddUser = () => {
   </div>
   </div>`;
 };
+
+// user pop-up
 document.getElementById("pop-up").innerHTML = popAddUser();
 document.getElementById("pop-up").classList.add("display-none");
 
-document.getElementById("plus").onclick = () => {
-  document.getElementById("pop-up").classList.remove("display-none");
-  document.getElementById("close-pop-up").onclick = () => {
-    document.getElementById("pop-up").classList.add("display-none");
+const setpopUp = () => {
+  document.getElementById("plus").onclick = () => {
+    document.getElementById("pop-up").classList.remove("display-none");
+    document.getElementById("close-pop-up").onclick = () => {
+      document.getElementById("pop-up").classList.add("display-none");
+    };
   };
 };
