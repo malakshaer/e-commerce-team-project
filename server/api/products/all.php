@@ -3,11 +3,11 @@
 include("../../connection.php");
 
 
-    $categories_id = isset($_GET["categories_id"]);
+    $categories_id = $_GET["categories_id"];
     
 
-    $query = $mysqli->prepare("SELECT * FROM products WHERE id = ?");
-    $query->bind_param('i', $categories_id);
+    $query = $mysqli->prepare("SELECT * FROM products WHERE categories_id = ?");
+    $query->bind_param('s', $categories_id);
     $query->execute();
 
     $array = $query->get_result();
