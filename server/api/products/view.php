@@ -2,24 +2,23 @@
 
 include_once("../../connection.php");
 
-$id = isset($_GET['id']);
+$product_id = $_GET['product_id'];
 
-$query = $mysqli->prepare("SELECT views FROM products WHERE `id` = ?");
-$query->bind_param('s', $id);
+$query = $mysqli->prepare("SELECT views FROM products WHERE id = ?");
+$query->bind_param('s', $product_id);
 $query->execute();
-$arr = $query->get_result();
+$array = $query->get_result();
 
 
-$result =[];
-while($value = $arr->fetch_assoc()){
-    $result[] = $value;
+$response = [];
+
+while($value = $array->fetch_assoc()){
+    $response[] = $value;
 };
 
-if(!$result){
-    $response["exist"] = FALSE;
+if($response){
+    echo json_encode($response); 
 }else{
-    $response["exist"] = TRUE;
+    echo "error";
 }
-
-echo json_encode($response);
 ?>
