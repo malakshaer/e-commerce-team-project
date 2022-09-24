@@ -1,10 +1,10 @@
-window.addEventListener("DOMContentLoaded", () => {
-  const sideNavBar = () => {
-    var sideNavBars = "";
+const navBars = [1];
+function sideNavBar() {
+  var sideNavBars = "";
 
-    navBars.map(
-      (navBar) =>
-        (sideNavBars += `
+  navBars.map(
+    (navBar) =>
+      (sideNavBars += `
           <div class="side-nav-logo-container">
             <div class="side-nav-logo">
               <img src="./Images/Logo-icon.svg" alt="Logo" />
@@ -42,10 +42,7 @@ window.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         `)
-    );
-    return sideNavBars;
-  };
-  document.getElementById("side-nav-bar").innerHTML = sideNavBar();
-});
-
-const navBars = [1];
+  );
+  return sideNavBars;
+}
+document.getElementById("side-nav-bar").innerHTML = sideNavBar();

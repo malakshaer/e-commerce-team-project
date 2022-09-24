@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spurce Trolley Seller</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./components/topBar.js"></script>
+    <script src="./components/data.js" defer></script>
+    <script src="./components/topBar.js" defer></script>
+    <script src="./components/topBarActions.js" defer></script>
     <!-- <script src="./components/categories.js"></script>
     <script src="./components/categoriesSelect.js"></script>
     <script src="./components/products.js"></script> -->
@@ -15,8 +17,7 @@
     <!-- <script src="./components/revenueFilter.js"></script>
     <script src="./components/revenueResult.js"></script> -->
     <!-- <script src="./components/inbox.js"></script> -->
-    <script src="./components/chat.js" defer></script>
-    <script src="script.js" defer></script>
+    <!-- <script src="./components/chat.js" defer></script> -->
   </head>
   <body>
     <!-- Start of layout divider -->
@@ -31,7 +32,7 @@
           <div class="side-nav-logo">
             <img src="./Images/logo.svg" alt="Logo" />
           </div>
-          <div class="side-nav-close-btn">
+          <div class="side-nav-close-btn" id="close-icon">
             <img src="./Images/x-icon.svg" alt="close icon" />
           </div>
         </div>
@@ -70,51 +71,7 @@
       <!-- End of side-nav -->
 
       <!-- Start of pages content -->
-      <div class="pages-content-wrapper">
-        <!-- Start of chat -->
-        <!-- Start of chat header -->
-        <div
-          class="chat-header-container pages-header-container"
-          id="chat-header-id"
-        >
-          <div class="chat-header pages-header">
-            <div class="chat-icon pages-header-icon">
-              <img src="Images/mail-icon.svg" alt="Email Icon" />
-            </div>
-            <h2>Username</h2>
-          </div>
-          <div class="chat-add-icon pages-header-add-icon">
-            <img src="./Images/add-icon.svg" alt="Add Icon" />
-          </div>
-        </div>
-        <!-- End of chat header -->
-
-        <!-- Start of chat content -->
-        <div
-          class="chat-content-container pages-content-container"
-          id="chat-content-id"
-        >
-          <div class="chat-content pages-content" id="chat-box">
-            <div class="chat-message">
-              <div class="chat-message-text left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                commodi aut, vero sapiente placeat nostrum consequatur sunt.
-                Totam nisi autem itaque provident veniam dignissimos, hic quas
-                tempora earum deserunt nulla.
-              </div>
-              <div class="chat-message-date left">9/9/2019</div>
-            </div>
-          </div>
-          <div class="chat-input pages-content">
-            <textarea name="input" id="chat-input"></textarea>
-            <div class="chat-send-img" id="send-input">
-              <img src="./Images/send-icon.svg" alt="Send Icon" />
-            </div>
-          </div>
-        </div>
-        <!-- End of inbox content -->
-        <!-- End of inbox -->
-      </div>
+      <div class="pages-content-wrapper"></div>
       <!-- End of pages content -->
     </div>
     <!-- End of layout divider -->
