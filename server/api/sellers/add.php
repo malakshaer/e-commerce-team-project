@@ -4,18 +4,17 @@ include("../../connection.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
   
-  $id = isset($_POST["id"]);
-  $name = isset($_POST["name"]);
-  $email = isset($_POST["email"]);
-  $birthday =isset($_POST["birthday"]);
-  $password =isset($_POST["password"]);
-  $join_date =isset($_POST["join_date"]);
-  $profile_img =isset($_POST["profile_img"]);
-  $seller_id = isset($_POST["user_types_id"]);
+  $id = ($_POST["id"]);
+  $name = ($_POST["name"]);
+  $email = ($_POST["email"]);
+  $birthday =($_POST["birthday"]);
+  $password =($_POST["password"]);
+  $profile_img =($_POST["profile_img"]);
   
-  $query = "INSERT INTO users(name,email,birthday,join_date,profile_img) VALUE (?,?,?,?,?) WHERE `id` = $seller_id";
+  
+  $query = "INSERT INTO users(id,name,email,birthday,profile_img,password) VALUE (?,?,?,?,?,?)";
   $query =$mysqli->prepare($query);
-  $query->bind_param("sssss",$name,$email,$birthday,$joined_date,$profile_img);
+  $query->bind_param("ssssss",$seller_id,$name,$email,$birthday,$profile_img,$password);
   $query->execute();
 
   if($query){
