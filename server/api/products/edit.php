@@ -2,18 +2,15 @@
 
 include("../../connection.php");
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-  
-  $product_id = $_POST["id"];
+  $categories_id = $_GET["categories_id"];
   $name = $_POST["name"];
   $description = $_POST["description"];
-  $price =isset($_POST["price"]);
-  $discount_price = isset($_POST["discount_price"]);
-  $picture_img = isset($_POST["picture_img"]);
+  $price =$_POST["price"];
+  $discount_price = $_POST["discount_price"];
+  $picture_img = $_POST["picture_img"];
 
 
-  $query = "UPDATE `products` SET (name,description,price,discount_price,picture_img) = (?,?,?,?,?) WHERE `id`= $product_id";
-  $query = $mysqli->prepare($query);
+  $query = $mysqli->prepare("UPDATE products SET name = ?, description = ?, price = ?, discount_price = ?, picture_img = ? WHERE id = $categories_id");
   $query->bind_param("sssss", $name,$description,$price,$discount_price,$picture_img);
   $query->execute();
 
@@ -27,5 +24,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   {
     echo "Something went wrong!";
   }
-}
+
 ?>

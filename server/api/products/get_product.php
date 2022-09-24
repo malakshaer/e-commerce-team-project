@@ -2,11 +2,11 @@
 
 include("../../connection.php");
 
-$id = isset($_GET["id"]);
+$categories_id = $_GET["categories_id"];
 
-$query = "SELECT * FROM products WHERE `id` = ? ";
+$query = "SELECT * FROM products WHERE id = ? ";
 $query = $mysqli->prepare($query);
-$query->bind_param('s', $id);
+$query->bind_param('s', $categories_id);
 $query->execute();
 
 $array = $query->get_result();

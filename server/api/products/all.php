@@ -2,29 +2,28 @@
 
 include("../../connection.php");
 
-if($_SERVER["REQUEST_METHOD"] == "GET"){
-    
+
     $categories_id = isset($_GET["categories_id"]);
+    
 
-
-    $query = "SELECT * FROM products WHERE `id` = ?";
-    $query = $mysqli->prepare($query);
-    $query->bind_param('s', $categories_id);
+    $query = $mysqli->prepare("SELECT * FROM products WHERE id = ?");
+    $query->bind_param('i', $categories_id);
     $query->execute();
 
-    $arr = $query->get_result();
+    $array = $query->get_result();
 
-    $result =[];
-    while($value = $arr->fetch_assoc()){
-        $result[] = $value;
+    $response =[];
+
+    while($value = $array->fetch_assoc()){
+        $response[] = $value;
     };
 
-    if(!$result){
-        $response["exist"] = FALSE;
+    if($response){
+        echo json_encode($response); 
     }else{
-        $response["exist"] = TRUE;
+        echo "error";
     }
 
-    echo json_encode($response);
-}
+    
+// }
 ?>

@@ -1,14 +1,13 @@
 <?php
+include("../../connection.php");
 
-include_once("../../connection.php");
 
-$product_id = $_GET['product_id'];
 
-$query = $mysqli->prepare("SELECT views FROM products WHERE id = ?");
-$query->bind_param('s', $product_id);
+$query = "SELECT quantity FROM orders_has_products ORDER BY quantity DESC LIMIT 5";
+$query = $mysqli->prepare($query);
+
 $query->execute();
 $array = $query->get_result();
-
 
 $response = [];
 
@@ -21,4 +20,6 @@ if($response){
 }else{
     echo "error";
 }
+
+
 ?>

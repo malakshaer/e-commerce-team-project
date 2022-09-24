@@ -3,13 +3,11 @@
 include("../../connection.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-  $id = $_POST["id"];
-  
-  $query =$mysqli->prepare("DELETE FROM products WHERE id = ?");
-  $query->bind_param('i', $id);
-  $array = $query->get_result();
-
+    
+  $id = $_GET["id"];  
+  $sql = "UPDATE products SET views = views +1 where id = ?";
+  $query =$mysqli->prepare($sql);
+  $query->bind_param("s",$id);
   $query->execute();
 
   if($query){
