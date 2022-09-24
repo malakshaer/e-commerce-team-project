@@ -8,6 +8,7 @@ const users = [
 ];
 
 // Used for categories list content
+// Used for categories select in products
 const categories = [
   {
     name: "Site Furnishings",
@@ -194,3 +195,5 @@ const products = [
     img: "http://dummyimage.com/111x100.png/ff4444/ffffff",
   },
 ];
+
+// revenues missing
