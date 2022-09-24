@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     
     $id = $_POST["id"];
     $order_date = $_POST["order_date"];
-    $client_id = $_POST["user_types_id"];
+    $client_id = $_POST["user_type_id"];
     
     $query = "INSERT INTO orders(id,order_date) WHERE id = $client_id";
     $query = $mysqli->prepare($query);

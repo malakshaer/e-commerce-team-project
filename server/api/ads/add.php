@@ -2,14 +2,12 @@
 
 include("../../connection.php");
 
-
-$pic_url = $_POST["picture_url"];
+$picture_url = $_POST["picture_url"];
 $link = $_POST["link"];
 $seller_id = $_POST["seller_id"];
 
-$query = "INSERT INTO ads ( picture_url,link) VALUE (?,?) WHERE id = $seller_id";
-$query = $mysqli->prepare($query);
-$query->bind_param('ss', $pic_url,$link);
+$query = $mysqli->prepare("INSERT INTO ads(picture_url,link,seller_id) VALUE (?,?,?)");
+$query->bind_param('sss', $picture_url,$link,$seller_id);
 $query->execute();
 
 

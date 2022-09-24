@@ -2,10 +2,10 @@
 
 include("../../connection.php");
 
-if($id = isset($_GET["id"]) && $seller_id = $_GET["user_types_id"]){
+if($id = isset($_GET["id"]) && $seller_id = $_GET["user_type_id"]){
     
     $id = $_GET["id"];
-    $client_id = $_GET["user_types_id"];
+    $client_id = $_GET["user_type_id"];
 
 
 

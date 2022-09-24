@@ -2,10 +2,10 @@
 
 include("../../connection.php");
 
-if($id = isset($_GET["id"]) && $seller_id = $_GET["user_types_id"]){
+if($id = isset($_GET["id"]) && $seller_id = $_GET["user_type_id"]){
 
     $id = $_GET["id"];
-    $seller_id = $_GET["user_types_id"];
+    $seller_id = $_GET["user_type_id"];
 
     $query = "SELECT `o.id` FROM `orders` as o,`users` as u WHERE `o.users_id` = `u.id` =$seller_id";
     $query = $mysqli->prepare($query);

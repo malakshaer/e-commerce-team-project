@@ -2,18 +2,20 @@
 
 include("../../connection.php");
 
-$id = isset($_POST["id"]);
-$name = isset($_POST["name"]);
-$email = isset($_POST["email"]);
-$birthday =isset($_POST["birthday"]);
-$join_date =isset($_POST["join_date"]);
-$profile_img =isset($_POST["profile_img"]);
-$client_id = isset($_POST["user_type_id"]);
+
+$name = $_POST["name"];
+$email = $_POST["email"];
+$birthday = $_POST["birthday"];
+$profile_img = $_POST["profile_img"];
+$password = $_POST["password"];
+$password = hash('sha256', $password);
+$password .= "a";
+$client_id =$_POST["client_id"];
 
 
-$query = "UPDATE  users SET (name,email,birthday,join_date,profile_img) = (?,?,?,?,?,?) WHERE `id` = $client_id";
+$query = "UPDATE  users SET name = ?,email = ?,birthday = ?,password = ?,profile_img = ? WHERE id = $client_id";
 $query = $mysqli->prepare($query);
-$query->bind_param("sssss", $name,$email,$birthday,$join_date,$profile_img);
+$query->bind_param("sssss", $name,$email,$birthday,$password,$profile_img);
 $query->execute();
 
 if($query)

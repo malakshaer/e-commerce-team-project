@@ -1,12 +1,11 @@
 <?php
 
-include("../../connection.php");
+    include("../../connection.php");
+    
+    $client_id = $_GET["client_id"];
 
-
-    $order_id = $_GET["order_id"];
-
-    $query = $mysqli->prepare("SELECT * FROM products  WHERE id = ?");
-    $query->bind_param('i', $order_id);
+    $query= "SELECT * FROM orders  WHERE client_id = $client_id";
+    $query = $mysqli->prepare($query);
     $query->execute();
     $array = $query->get_result();
 
@@ -21,5 +20,5 @@ include("../../connection.php");
     }else{
         echo "error";
     }
-
+    
 ?>
