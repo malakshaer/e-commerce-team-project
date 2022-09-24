@@ -3,7 +3,7 @@ include("../../connection.php");
 
 
 
-$query = "SELECT quantity FROM orders_has_products ORDER BY quantity DESC LIMIT 5";
+$query = "SELECT products_id FROM orders_has_products ORDER BY quantity DESC LIMIT 5";
 $query = $mysqli->prepare($query);
 
 $query->execute();

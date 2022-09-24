@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     ini_set("sendmail_from","00000@gmail.com");
     ini_set("sendmail_path", "http://localhost:8080/e-commerce-team-project/server/api/sign/signup.php");
 
-    $email = mail($email,$subject,$message);
+    mail($email,$subject,$message);
 
     $passHash = hash("sha256", $_POST["password"]);
     $passHash .= "a";

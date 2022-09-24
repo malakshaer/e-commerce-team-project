@@ -2,10 +2,10 @@
 
 include("../../connection.php");
 
-$email = isset($_POST['email']);
-$password = isset($_POST['password']);
+$email = $_POST['email'];
+$password = $_POST['password'];
 $password = hash('sha256', $password);
-
+$password .= "a";
 $query = $mysqli->prepare("SELECT * FROM users WHERE email = ? ");
 $query->bind_param('s', $email);
 $query->execute();
@@ -24,7 +24,6 @@ $result['msg']= 'Your mail does not exist';
 }else{
     $result['msg']= 'Your password is wrong';
 }
-
 echo json_encode($result);
 ?>
 

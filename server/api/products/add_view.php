@@ -2,7 +2,7 @@
 
 include("../../connection.php");
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+
     
   $id = $_GET["id"];  
   $sql = "UPDATE products SET views = views +1 where id = ?";
@@ -16,6 +16,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   }else{
       echo "something went wrong";
   }
-}
+
 
 ?>
