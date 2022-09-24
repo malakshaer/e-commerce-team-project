@@ -29,6 +29,8 @@ navCategoriesBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.remove("active");
+
+  categoriesRender();
 };
 
 //clicking on products nav bar
@@ -48,6 +50,8 @@ navProductsBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.remove("active");
+
+  productsRender();
 };
 
 navRevenueBtn.onclick = () => {
@@ -66,6 +70,8 @@ navRevenueBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.remove("active");
+
+  revenueRender();
 };
 
 navDiscountBtn.onclick = () => {
@@ -84,6 +90,8 @@ navDiscountBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.remove("active");
+
+  discountRender();
 };
 
 navViewsBtn.onclick = () => {
@@ -102,6 +110,8 @@ navViewsBtn.onclick = () => {
   navViewsBtn.classList.add("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.remove("active");
+
+  viewsRender();
 };
 
 navAdsBtn.onclick = () => {
@@ -120,6 +130,8 @@ navAdsBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.add("active");
   navInboxBtn.classList.remove("active");
+
+  adsRender();
 };
 
 navInboxBtn.onclick = () => {
@@ -138,4 +150,6 @@ navInboxBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.add("active");
+
+  inboxRender();
 };
