@@ -133,6 +133,7 @@ h3 {
   -o-border-radius: 3rem 0 0 3rem;
   gap: 1rem;
   cursor: pointer;
+  color: white;
 }
 
 .side-nav-tab img {
@@ -143,9 +144,12 @@ h3 {
 .side-nav-tab p {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
 }
 
+.side-nav-tab.active {
+  color: black;
+  background-color: white;
+}
 /*** Start of Pages Content ***/
 .pages-content-wrapper {
   height: 100%;
@@ -517,7 +521,7 @@ h3 {
   }
 
   .side-nav-tab-container {
-    padding: 0 1rem 0 2rem;
+    padding: 0 0rem 0 2rem;
   }
 
   .side-nav-logo {

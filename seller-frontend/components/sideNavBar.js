@@ -1,11 +1,7 @@
 const navBars = [1];
 function sideNavBar() {
-  var sideNavBars = "";
-
-  navBars.map(
-    (navBar) =>
-      (sideNavBars += `
-          <div class="side-nav-logo-container">
+  return `
+           <div class="side-nav-logo-container">
             <div class="side-nav-logo">
               <img src="./Images/Logo-icon.svg" alt="Logo" />
             </div>
@@ -41,8 +37,6 @@ function sideNavBar() {
               <p>Inbox</p>
             </div>
           </div>
-        `)
-  );
-  return sideNavBars;
+          `;
 }
 document.getElementById("side-nav-bar").innerHTML = sideNavBar();
