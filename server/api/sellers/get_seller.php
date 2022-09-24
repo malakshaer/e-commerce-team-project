@@ -1,10 +1,10 @@
 <?php
 include("../../connection.php");
 
+$id = $_POST["id"];
 
-
-$query = $mysqli->prepare("SELECT * FROM users  WHERE user_types_id = 2");
-// $query->bind_param('i', 2);
+$query = $mysqli->prepare("SELECT * FROM users  WHERE id = ?");
+$query->bind_param("s", $id);
 $query->execute();
 $array = $query->get_result();
 
