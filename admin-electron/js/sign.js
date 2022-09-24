@@ -1,3 +1,6 @@
+let signAPI =
+  "http://localhost/e-commerce-team-project/server/api/sign/signin.php";
+
 const signUp = () => {
   return `<div class="sign-container display-none"  id='sign-up-container'>
     <h1>Create new account</h1>
@@ -33,10 +36,10 @@ const signIn = () => {
         <input placeholder="Password" id='pass'/>
       </div>
       <button class="sign-btn" id='sign-in-btn'>Sign In</button>
-      <div class="have-account" id='dont-have'>I dont have an account</div>
-    </div>
-  </div>`;
+      </div>
+      </div>`;
 };
+// <div class="have-account" id='dont-have'>I dont have an account</div>
 
 document.getElementById("sign-body").innerHTML =
   signUp() + signIn() + validateCode();
@@ -47,11 +50,11 @@ document.getElementById("have-account").onclick = () => {
   document.getElementById("validation-container").classList.add("display-none");
 };
 
-document.getElementById("dont-have").onclick = () => {
-  document.getElementById("sign-up-container").classList.remove("display-none");
-  document.getElementById("sign-in-container").classList.add("display-none");
-  document.getElementById("validation-container").classList.add("display-none");
-};
+// document.getElementById("dont-have").onclick = () => {
+//   document.getElementById("sign-up-container").classList.remove("display-none");
+//   document.getElementById("sign-in-container").classList.add("display-none");
+//   document.getElementById("validation-container").classList.add("display-none");
+// };
 
 document.getElementById("sign-up-btn").onclick = () => {
   document.getElementById("sign-up-container").classList.add("display-none");
@@ -61,7 +64,18 @@ document.getElementById("sign-up-btn").onclick = () => {
     .classList.remove("display-none");
 };
 
+// on clicking the sign in button
 document.getElementById("sign-in-btn").onclick = () => {
-  document.getElementById("main-container").classList.remove("display-none");
-  document.getElementById("sign-container").classList.add("display-none");
+  var params = new URLSearchParams();
+  params.append("email", document.getElementById("mail").value);
+  params.append("password", document.getElementById("pass").value);
+
+  axios.post(signAPI, params).then((res) => {
+    if (res.data.user_types_id == 0) {
+      document
+        .getElementById("main-container")
+        .classList.remove("display-none");
+      document.getElementById("sign-container").classList.add("display-none");
+    }
+  });
 };

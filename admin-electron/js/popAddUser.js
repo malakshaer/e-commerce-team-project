@@ -7,7 +7,8 @@ const popAddUser = () => {
     </div>
   <div class='pop-body'>
     <input placeholder='Email'/>
-    <input placeholder='password'/>
+    <input placeholder='Name'/>
+    <input placeholder='Password'/>
     <button class="sign-btn">Add</div>
   </div>
   </div>
