@@ -8,6 +8,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $email = $_POST["email"];
     $password = $_POST["password"];
     $birthday =$_POST["birthday"];
+    $user_types_id = 2;
+    $is_ban = 0;
     $code = rand(0,10)*100;
     $code .= rand(0,10)*100;
     $subject = "Signup | Verification";
@@ -25,8 +27,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
     $passHash = hash("sha256", $_POST["password"]);
     $passHash .= "a";
-    $query = $mysqli->prepare("INSERT INTO users (`name`,`email`, `password`,`code`,`birthday`) VALUES (? ,?, ?,?, ?)");
-    $query->bind_param("sssss", $name, $email,$passHash,$code,$birthday);
+    $query = $mysqli->prepare("INSERT INTO users (`name`,`email`, `password`,`code`,`birthday`,`user_types_id`,`is_ban`) VALUES (?,?,? ,?, ?,?, ?)");
+    $query->bind_param("sssssss", $name, $email,$passHash,$code,$birthday,$user_types_id,$is_ban);
     $query->execute();
 
 
