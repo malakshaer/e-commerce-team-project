@@ -12,9 +12,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $profile_img =($_POST["profile_img"]);
   
   
-  $query = "INSERT INTO users(id,name,email,birthday,profile_img,password) VALUE (?,?,?,?,?,?)";
+  $query = "INSERT INTO users(id,name,email,profile_img,password) VALUE (?,?,?,?,?)";
   $query =$mysqli->prepare($query);
-  $query->bind_param("ssssss",$seller_id,$name,$email,$birthday,$profile_img,$password);
+  $query->bind_param("sssss",$seller_id,$name,$email,$profile_img,$password);
   $query->execute();
 
   if($query){

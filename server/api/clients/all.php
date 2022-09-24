@@ -1,10 +1,10 @@
 <?php
   include("../../connection.php");
 
-  $client_id = $_GET["client_id"];
+  
 
-  $query = $mysqli->prepare("SELECT name,profile_img  FROM users WHERE id = ?");
-  $query->bind_param('i', $client_id);
+  $query = $mysqli->prepare("SELECT *  FROM users");
+  
   $query->execute();
   $array = $query->get_result();
 

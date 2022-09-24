@@ -2,24 +2,23 @@
 
 include("../../connection.php");
 
-$ads_id = $_GET["ads_id"];
+$picture_url = $_GET["picture_url"];
 
 $query = $mysqli->prepare("SELECT * FROM ads WHERE id = ?");
-$query->bind_param('i', $ads_id);
+$query->bind_param('i', $picture_url);
 $query->execute();
 
-$arr = $query->get_result();
+$array = $query->get_result();
 
-$result =[];
-while($value = $arr->fetch_assoc()){
-    $result[] = $value;
+$response = [];
+
+while($value = $array->fetch_assoc()){
+    $response[] = $value;
 };
 
-if(!$result){
-    $response["exist"] = FALSE;
+if($response){
+    echo json_encode($response); 
 }else{
-    $response["exist"] = TRUE;
+    echo "error";
 }
-
-echo json_encode($response);
 ?>

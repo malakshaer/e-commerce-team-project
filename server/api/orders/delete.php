@@ -2,24 +2,23 @@
 
 include("../../connection.php");
 
-$id = isset($_POST["id"]);
+if($_SERVER["REQUEST_METHOD"] == "POST"){
 
+  $client_id = $_GET["client_id"];
+  
+  $query =$mysqli->prepare("DELETE FROM orders WHERE id = ?");
+  $query->bind_param('i', $client_id);
+  $array = $query->get_result();
 
-$query = "DELETE FROM orders WHERE `id` = ?";
+  $query->execute();
 
-$query = $mysqli->prepare($query);
-$query->bind_param("s", $id);
-$query->execute();
+  if($query){
+      echo "done successfully";
 
-
-if($query)
-{
-  echo "done successfully!";
-
-}
-else
-{
-  echo "Something went wrong!";
+  }else{
+      echo "something went wrong";
+  }
 }
 
 ?>
+

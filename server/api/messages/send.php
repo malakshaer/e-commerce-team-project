@@ -2,17 +2,13 @@
 include("../../connection.php");
 
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+
     $message = $_POST["message"];
-    $sender_id = isset($_POST["sender_id"]);
-    $receiver_id = isset($_POST["receiver_id"]);
-    $message_date = $_POST["message_date"];
+    $sender_id = $_GET["sender_id"];
     
-
-    $sql = "INSERT INTO messages(receiver_id, sender_id,message_date,message) VALUE (?,?,?,?)";
+    $sql = "INSERT INTO messages(message,sender_id) VALUE (?,?)";
     $query =$mysqli->prepare($sql);
-
-    $query->bind_param("ssss", $receiver_id, $sender_id, $message_date, $message);
+    $query->bind_param('ss', $message,$sender_id);
     $query->execute();
 
     if($query){
@@ -21,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }else{
         echo "something went wrong";
     }
-}
+
 
 
 ?>
