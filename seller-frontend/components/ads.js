@@ -1,88 +1,48 @@
-window.addEventListener("DOMContentLoaded", () => {
-  const ad = () => {
-    var ads = "";
+function adsRender() {
+  const adsHeader = `
+        <div
+          class="ads-header-container pages-header-container"
+          id="ads-header-id"
+        >
+          <div class="ads-header pages-header">
+            <div class="ads-icon pages-header-icon">
+              <img src="Images/Ads-icon.svg" alt="Ads Icon" />
+            </div>
+            <h2>Published Ads</h2>
+          </div>
+          <div class="ads-add-icon pages-header-add-icon">
+            <img src="./Images/add-icon.svg" alt="Add Icon" />
+          </div>
+        </div>
 
-    advs.map(
-      (adv) =>
-        (ads += `
+        <div
+          class="ads-content-container pages-content-container"
+          id="ads-content"
+        ></div>
+      `;
+
+  function adsContent() {
+    let adsList = "";
+
+    ads.map((ad) => {
+      adsList += `
           <div class="ads-content pages-content">
             <div class="ads-content-img">
-              <img src="${adv.img}" alt="Ads Image" />
+              <img src="${ad.img}" alt="Ads Image" />
             </div>
             <div class="ads-content-url">
               <p>
                 Link:
-                <a href="${adv.img}">${adv.img}</a>
+                <a href="${ad.img}">${ad.img}</a>
               </p>
             </div>
             <h3>remove</h3>
           </div>
-        `)
-    );
-    return ads;
-  };
-  document.getElementById("ads-content").innerHTML = ad();
-});
+        `;
+    });
+    return adsList;
+  }
 
-const advs = [
-  {
-    img: "https://source.unsplash.com/random",
-  },
-  {
-    img: "https://source.unsplash.com/random",
-  },
-  {
-    img: "https://robohash.org/quisliberodolores.png?size=50x50&set=set1",
-  },
-  {
-    img: "https://robohash.org/temporerecusandaeex.png?size=50x50&set=set1",
-  },
-  {
-    img: "https://source.unsplash.com/random",
-  },
-  {
-    img: "https://source.unsplash.com/random",
-  },
-  {
-    img: "https://source.unsplash.com/random",
-  },
-  {
-    img: "https://robohash.org/rerumculpadolorem.png?size=50x50&set=set1",
-  },
-  {
-    img: "hhttps://source.unsplash.com/random",
-  },
-  {
-    img: "https://source.unsplash.com/random",
-  },
-  {
-    img: "https://robohash.org/esteiusdolores.png?size=50x50&set=set1",
-  },
-  {
-    img: "https://robohash.org/exercitationemculpanatus.png?size=50x50&set=set1",
-  },
-  {
-    img: "https://robohash.org/quasiperspiciatisconsequatur.png?size=50x50&set=set1",
-  },
-  {
-    img: "https://robohash.org/rerumquiaquasi.png?size=50x50&set=set1",
-  },
-  {
-    img: "https://robohash.org/voluptatevoluptatemfuga.png?size=50x50&set=set1",
-  },
-  {
-    img: "https://robohash.org/possimusfacilisearum.png?size=50x50&set=set1",
-  },
-  {
-    img: "https://robohash.org/voluptasetquasi.png?size=50x50&set=set1",
-  },
-  {
-    img: "https://robohash.org/verosedat.png?size=50x50&set=set1",
-  },
-  {
-    img: "https://robohash.org/undeetab.png?size=50x50&set=set1",
-  },
-  {
-    img: "https://robohash.org/autquasisuscipit.png?size=50x50&set=set1",
-  },
-];
+  pageWrapper.innerHTML = adsHeader;
+  document.getElementById("ads-content").innerHTML = adsContent();
+}

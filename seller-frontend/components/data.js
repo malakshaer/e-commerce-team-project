@@ -279,3 +279,111 @@ const coupons = [
     date: "4/7/2022",
   },
 ];
+
+// used for ads list
+const ads = [
+  {
+    img: "https://source.unsplash.com/random",
+  },
+  {
+    img: "https://source.unsplash.com/random",
+  },
+  {
+    img: "https://robohash.org/quisliberodolores.png?size=50x50&set=set1",
+  },
+  {
+    img: "https://robohash.org/temporerecusandaeex.png?size=50x50&set=set1",
+  },
+  {
+    img: "https://source.unsplash.com/random",
+  },
+  {
+    img: "https://source.unsplash.com/random",
+  },
+  {
+    img: "https://source.unsplash.com/random",
+  },
+  {
+    img: "https://robohash.org/rerumculpadolorem.png?size=50x50&set=set1",
+  },
+  {
+    img: "hhttps://source.unsplash.com/random",
+  },
+  {
+    img: "https://source.unsplash.com/random",
+  },
+  {
+    img: "https://robohash.org/esteiusdolores.png?size=50x50&set=set1",
+  },
+  {
+    img: "https://robohash.org/exercitationemculpanatus.png?size=50x50&set=set1",
+  },
+  {
+    img: "https://robohash.org/quasiperspiciatisconsequatur.png?size=50x50&set=set1",
+  },
+  {
+    img: "https://robohash.org/rerumquiaquasi.png?size=50x50&set=set1",
+  },
+  {
+    img: "https://robohash.org/voluptatevoluptatemfuga.png?size=50x50&set=set1",
+  },
+  {
+    img: "https://robohash.org/possimusfacilisearum.png?size=50x50&set=set1",
+  },
+  {
+    img: "https://robohash.org/voluptasetquasi.png?size=50x50&set=set1",
+  },
+  {
+    img: "https://robohash.org/verosedat.png?size=50x50&set=set1",
+  },
+  {
+    img: "https://robohash.org/undeetab.png?size=50x50&set=set1",
+  },
+  {
+    img: "https://robohash.org/autquasisuscipit.png?size=50x50&set=set1",
+  },
+];
+
+// used for inbox
+const clients = [
+  {
+    img: "https://robohash.org/recusandaeharumvoluptatum.png?size=50x50&set=set1",
+    username: "Cherri",
+  },
+  {
+    img: "https://robohash.org/dolorumquibusdamquia.png?size=50x50&set=set1",
+    username: "Leonie",
+  },
+  {
+    img: "https://robohash.org/velfugaest.png?size=50x50&set=set1",
+    username: "Tatiania",
+  },
+  {
+    img: "https://robohash.org/veldistinctioaliquam.png?size=50x50&set=set1",
+    username: "Aleksandr",
+  },
+  {
+    img: "https://robohash.org/sedquibusdamvelit.png?size=50x50&set=set1",
+    username: "Pru",
+  },
+  {
+    img: "https://robohash.org/etquiin.png?size=50x50&set=set1",
+    username: "Alyse",
+  },
+  {
+    img: "https://robohash.org/quidemquisvoluptas.png?size=50x50&set=set1",
+    username: "Fin",
+  },
+  {
+    img: "https://robohash.org/idexplicabomaiores.png?size=50x50&set=set1",
+    username: "Kaitlin",
+  },
+  {
+    img: "https://robohash.org/accusantiumdictamolestiae.png?size=50x50&set=set1",
+    username: "Ursala",
+  },
+  {
+    img: "https://robohash.org/estautsit.png?size=50x50&set=set1",
+    username: "Reginald",
+  },
+];

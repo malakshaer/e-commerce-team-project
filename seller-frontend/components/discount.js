@@ -18,7 +18,7 @@ function discountRender() {
         <div
           class="discount-content-container pages-content-container"
           id="discount-content"
-        >,/div>
+        ></div>
       `;
 
   function discountsContent() {
