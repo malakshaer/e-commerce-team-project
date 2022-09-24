@@ -26,7 +26,7 @@ function inboxRender() {
 
     clients.map((client) => {
       inboxNotifications += `
-          <div class="inbox-content pages-content">
+          <div class="inbox-content pages-content" id="notification">
             <div class="inbox-content-img">
               <img src="${client.img}" alt="User Image" />
             </div>
@@ -39,4 +39,7 @@ function inboxRender() {
 
   pageWrapper.innerHTML = inboxHeader;
   document.getElementById("inbox-content").innerHTML = inboxContent();
+  document.getElementById("notification").onclick = () => {
+    chatRender();
+  };
 }
