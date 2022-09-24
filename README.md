@@ -129,4 +129,10 @@ repo link : https://github.com/abdallahmoubarak/e-commerce-team-project
 
 ---
 
-#### Stage 5: Presenting the project
+#### Stage 5: Project flow mini report
+
+![](./src/project-flow-minireport.png?style=center)
+
+---
+
+#### Stage 6: Presenting the project
