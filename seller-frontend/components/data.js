@@ -1,8 +1,8 @@
+// img_url used for top-nav
 const users = [
   {
     id: 1,
     name: "Timotheus",
-    // img used for top-nav
     img_url: "https://robohash.org/esseautrepellat.png?size=50x50&set=set1",
   },
 ];

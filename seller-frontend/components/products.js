@@ -14,11 +14,29 @@ function productsRender() {
             <img src="./Images/add-icon.svg" alt="Add Icon" />
           </div>
         </div>
+
+        <div class="pages-select-container">
+          <select name="categories" id="categories-select">
+            
+          </select>
+        </div>
+
         <div
           class="products-content-container pages-content-container"
           id="products-content"
         ></div>
       `;
+
+  function categoriesSelect() {
+    let categoriesSelects = "";
+
+    categories.map((category) => {
+      categoriesSelects += `
+          <option value="${category.name}">${category.name}</option>
+        `;
+    });
+    return categoriesSelects;
+  }
 
   function productsContent() {
     let productsList = "";
@@ -49,4 +67,5 @@ function productsRender() {
 
   pageWrapper.innerHTML = productsHeader;
   document.getElementById("products-content").innerHTML = productsContent();
+  document.getElementById("categories-select").innerHTML = categoriesSelect();
 }
