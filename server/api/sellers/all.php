@@ -1,30 +1,24 @@
 <?php
-
 include("../../connection.php");
 
-$id = isset($_GET["id"]);
-$name = isset($_GET["name"]);
-$profile_img =isset($_GET["profile_img"]);
-$seller_id = isset($_GET["user_type_id"]);
 
 
-$query = "SELECT FROM users(name,profile_img) = (?,?) WHERE `id` = $seller_id";
-$query = $mysqli->prepare($query);
-$query->bind_param("ss", $name,$profile_img);
+$query = $mysqli->prepare("SELECT * FROM users  WHERE  user_types_id = 2");
+
 $query->execute();
+$array = $query->get_result();
 
-$result =[];
-while($value = $arr->fetch_assoc()){
-    $result[] = $value;
+$response = [];
+
+while($value = $array->fetch_assoc()){
+    $response[] = $value;
 };
 
-
-if(!$result){
-  $response["exist"] = FALSE;
+if($response){
+    echo json_encode($response); 
 }else{
-  $response["exist"] = TRUE;
+    echo "error";
 }
 
-echo json_encode($response);
 
 ?>
