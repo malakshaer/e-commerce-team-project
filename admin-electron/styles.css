@@ -448,3 +448,55 @@ input {
   color: #e21a58;
   cursor: pointer;
 }
+
+/* sign popup */
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000085;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+  overflow: none;
+}
+
+.pop-container {
+  width: 30rem;
+  /* min-height: 15rem; */
+  font-size: 2rem;
+  text-align: center;
+  background: white;
+  display: flex;
+  padding-bottom: 2rem;
+  flex-direction: column;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  margin: auto;
+  overflow: auto;
+}
+
+.pop-up-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem;
+}
+
+.pop-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.close-pop-up {
+  cursor: pointer;
+}

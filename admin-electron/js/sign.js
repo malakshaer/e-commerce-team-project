@@ -15,7 +15,7 @@ const signUp = () => {
 };
 
 const validateCode = () => {
-  return `  <div class="sign-container display-none"  id='validation-container'>
+  return `<div class="sign-container display-none"  id='validation-container'>
       <h1>Enter the verification code</h1>
       <div class="inputs-container">
         <input placeholder="code" id='name' />

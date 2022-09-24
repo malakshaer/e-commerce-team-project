@@ -1,15 +1,3 @@
-insert into user_types (id, role) values (1, 'Engineer');
-insert into user_types (id, role) values (2, 'Subcontractor');
-insert into user_types (id, role) values (3, 'Construction Expeditor');
-insert into user_types (id, role) values (4, 'Electrician');
-insert into user_types (id, role) values (5, 'Project Manager');
-insert into user_types (id, role) values (6, 'Construction Expeditor');
-insert into user_types (id, role) values (7, 'Construction Worker');
-insert into user_types (id, role) values (8, 'Architect');
-insert into user_types (id, role) values (9, 'Construction Expeditor');
-insert into user_types (id, role) values (10, 'Construction Manager');
-insert into user_types (id, role) values (11, 'Construction Expeditor');
-insert into user_types (id, role) values (12, 'Engineer');
-insert into user_types (id, role) values (13, 'Architect');
-insert into user_types (id, role) values (14, 'Estimator');
-insert into user_types (id, role) values (15, 'Project Manager');
+insert into user_types (id, role) values (1, 'Admin');
+insert into user_types (id, role) values (2, 'Seller');
+insert into user_types (id, role) values (3, 'Client');
