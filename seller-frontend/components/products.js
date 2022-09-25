@@ -63,11 +63,11 @@ function productsRender() {
               </p>
             </div>
             <div class="product-control">
-              <div class="product-control-icon">
+              <div class="product-control-icon" id="edit-product">
                 <img src="./Images/edit-icon.svg" alt="Edit Icon" />
               </div>
               <div class="product-control-icon">
-                <img src="./Images/remove-icon.svg" alt="Remove Icon" />
+                <img src="./Images/remove-icon.svg" alt="Remove Icon" id="delete-product"/>
               </div>
             </div>
           </div>
@@ -98,6 +98,8 @@ function productsRender() {
 
   let addProduct =
     "http://localhost/e-commerce-team-project/server/api/products/add.php";
+  let deleteProduct =
+    "http://localhost/e-commerce-team-project/server/api/products/delete.php?id=5002";
   const pop = document.getElementById("popup-id");
   const addIcon = document.getElementById("add-icon");
   const addCategory = document.getElementById("add-category");
@@ -120,6 +122,17 @@ function productsRender() {
     params.append("discount_price", 0);
     axios.post(addProduct, params).then((res) => {
       // console.log(res);
+    });
+    // productsRender();
+  });
+
+  document.getElementById("delete-product").addEventListener("click", () => {
+    params = new URLSearchParams();
+    // temporary id
+    params.append("id", 2);
+    axios.post(deleteProduct, params).then((res) => {
+      console.log(res);
+      // productsRender();
     });
   });
 }

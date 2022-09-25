@@ -2,6 +2,7 @@ let newCategories;
 let newProducts;
 let newAds;
 let newMessages;
+
 let getCategories =
   "http://localhost/e-commerce-team-project/server/api/categories/get_categories.php";
 
@@ -11,14 +12,30 @@ axios.post(getCategories, params).then((res) => {
   newCategories = res.data;
   console.log(newCategories);
 });
-
+let x = [];
 let getProducts =
   "http://localhost/e-commerce-team-project/server/api/products/all.php?category_id=3";
 axios.post(getProducts, params).then((res) => {
   newProducts = res.data;
+  x = res.data;
   console.log(newProducts);
 });
+console.log(newProducts);
 
+// function returnedProducts() {
+//   return axios.post(getProducts, params).then((response) => response.data);
+// }
+
+// const axiosTest = async () => {
+//   try {
+//     const { data: response } = await axios.post(getProducts, params);
+//     return response;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// console.log(axiosTest);
 let getAds =
   "http://localhost/e-commerce-team-project/server/api/ads/seller.php?seller_id=3";
 axios.post(getAds, params).then((res) => {
@@ -238,6 +255,7 @@ products.map((product) => {
 
 // Creating an array of categories
 const categories = Object.keys(uniqueCategories);
+console.log(categories);
 
 // revenues missing
 
