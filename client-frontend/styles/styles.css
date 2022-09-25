@@ -378,3 +378,17 @@ img {
 .user-card-edit {
   cursor: pointer;
 }
+
+.search-input {
+  width: 80%;
+}
+.search-btn {
+  font-size: 1rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vh;
+  gap: 1rem;
+}
