@@ -56,6 +56,8 @@ function adsRender() {
   pageWrapper.innerHTML = adsHeader;
   document.getElementById("ads-content").innerHTML = adsContent();
 
+  let addAds =
+    "http://localhost/e-commerce-team-project/server/api/ads/add.php?seller_id=3";
   const pop = document.getElementById("popup-id");
   const addIcon = document.getElementById("add-icon");
   const addCategory = document.getElementById("add-category");
@@ -68,6 +70,13 @@ function adsRender() {
   });
   addCategory.addEventListener("click", () => {
     pop.classList.remove("show-flex");
-    // to add to it
+
+    params = new URLSearchParams();
+    params.append("seller_id", localStorage.getItem("id"));
+    params.append("picture_url", "url");
+    params.append("link", document.getElementById("url"));
+    axios.post(addAds, params).then((res) => {
+      // console.log(res);
+    });
   });
 }
