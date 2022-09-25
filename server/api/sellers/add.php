@@ -2,19 +2,18 @@
 
 include("../../connection.php");
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-  
-  $id = ($_POST["id"]);
-  $name = ($_POST["name"]);
-  $email = ($_POST["email"]);
-  $birthday =($_POST["birthday"]);
-  $password =($_POST["password"]);
-  $profile_img =($_POST["profile_img"]);
+
   
   
-  $query = "INSERT INTO users(id,name,email,profile_img,password) VALUE (?,?,?,?,?)";
-  $query =$mysqli->prepare($query);
-  $query->bind_param("sssss",$seller_id,$name,$email,$profile_img,$password);
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $password =$_POST["password"];
+  $profile_img =$_POST["profile_img"];
+  $user_type_id = 2;
+  
+  $query1 = "INSERT INTO users(name,email,profile_img,password,user_type_id) VALUE (?,?,?,?,?)";
+  $query =$mysqli->prepare($query1);
+  $query->bind_param("sssss",$name,$email,$profile_img,$password,$user_type_id);
   $query->execute();
 
   if($query){
@@ -23,6 +22,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   }else{
       echo "something went wrong";
   }
-}
+
 
 ?>
