@@ -1,3 +1,6 @@
+const banAPI =
+  "http://localhost/e-commerce-team-project/server/api/users/ban.php";
+
 const userCard = (users, option = "Edit") => {
   var usersList = "";
   users.map(
@@ -58,6 +61,9 @@ const loopingOverUserCards = () => {
         banBtn.classList.toggle("unban");
         if (banBtn.innerText == "Ban") banBtn.innerText = "Unban";
         else banBtn.innerText = "Ban";
+        var params = new URLSearchParams();
+        params.append("user_id", document.getElementById("mail").value);
+        axios.post(banAPI);
       };
     };
 

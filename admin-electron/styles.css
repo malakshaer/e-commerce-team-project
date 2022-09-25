@@ -442,6 +442,7 @@ input {
   -moz-border-radius: 0.2rem;
   -ms-border-radius: 0.2rem;
   -o-border-radius: 0.2rem;
+  cursor: pointer;
 }
 .unban {
   background: white;
