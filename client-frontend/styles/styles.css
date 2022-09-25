@@ -102,3 +102,22 @@ img {
   font-weight: 700;
   color: #e21a58;
 }
+.product-card-icons {
+  display: flex;
+  gap: 3rem;
+}
+
+.product-card-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.product-card-button {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #54549f;
+  text-align: center;
+  cursor: pointer;
+}
