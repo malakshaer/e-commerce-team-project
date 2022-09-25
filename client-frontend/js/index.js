@@ -49,7 +49,16 @@ const homeRender = () => {
     <section class="products" id="products-list"></section>
     <!-- end ads section -->`;
   slideShow();
-  document.getElementById("products-list").innerHTML = productCard(products);
+  let products;
+  axios
+    .get(
+      "http://localhost/e-commerce-team-project/server/api/products/get_all_products.php"
+    )
+    .then((res) => {
+      products = res.data;
+      document.getElementById("products-list").innerHTML =
+        productCard(products);
+    });
   // products.map(
   //   (product, i) =>
   //     (document.getElementById(product.id).onclick = () => {
@@ -153,4 +162,8 @@ const moreRender = () => {
     renderWishlist();
   };
   clicked();
+};
+
+window.onload = (event) => {
+  homeRender();
 };
