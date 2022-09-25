@@ -10,9 +10,19 @@ function adsRender() {
             </div>
             <h2>Published Ads</h2>
           </div>
-          <div class="ads-add-icon pages-header-add-icon">
+          <div class="ads-add-icon pages-header-add-icon" id="add-icon">
             <img src="./Images/add-icon.svg" alt="Add Icon" />
           </div>
+        </div>
+
+        <div class="popup popup-ads" id="popup-id">
+          <div class="popup-close-btn" id="close-popup">
+            <img src="./Images/x-icon.svg" alt="Close Icon" />
+          </div>
+          <input type="file" class="input-file" name="filename">
+          <label for="url">url: </label>
+          <input type="text" id="url" class="ads-url"/>
+          <button id="add-category">Add</button>
         </div>
 
         <div
@@ -45,4 +55,19 @@ function adsRender() {
 
   pageWrapper.innerHTML = adsHeader;
   document.getElementById("ads-content").innerHTML = adsContent();
+
+  const pop = document.getElementById("popup-id");
+  const addIcon = document.getElementById("add-icon");
+  const addCategory = document.getElementById("add-category");
+  const closePopup = document.getElementById("close-popup");
+  addIcon.addEventListener("click", () => {
+    pop.classList.add("show-flex");
+  });
+  closePopup.addEventListener("click", () => {
+    pop.classList.remove("show-flex");
+  });
+  addCategory.addEventListener("click", () => {
+    pop.classList.remove("show-flex");
+    // to add to it
+  });
 }

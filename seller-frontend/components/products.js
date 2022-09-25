@@ -10,9 +10,21 @@ function productsRender() {
             </div>
             <h2>Products</h2>
           </div>
-          <div class="products-add-icon pages-header-add-icon">
+          <div class="products-add-icon pages-header-add-icon" id="add-icon">
             <img src="./Images/add-icon.svg" alt="Add Icon" />
           </div>
+        </div>
+
+        <div class="popup popup-products" id="popup-id">
+          <div class="popup-close-btn" id="close-popup">
+            <img src="./Images/x-icon.svg" alt="Close Icon" />
+          </div>
+          <input type="file" class="input-file" name="filename">
+          <label for="name">Name: </label>
+          <input type="text" id="name"/>
+          <label for="price">Price: </label>
+          <input type="text" id="price"/>
+          <button id="add-category">Add</button>
         </div>
 
         <div class="pages-select-container">
@@ -83,4 +95,19 @@ function productsRender() {
   };
 
   document.getElementById("categories-select").innerHTML = categoriesSelect();
+
+  const pop = document.getElementById("popup-id");
+  const addIcon = document.getElementById("add-icon");
+  const addCategory = document.getElementById("add-category");
+  const closePopup = document.getElementById("close-popup");
+  addIcon.addEventListener("click", () => {
+    pop.classList.add("show-flex");
+  });
+  closePopup.addEventListener("click", () => {
+    pop.classList.remove("show-flex");
+  });
+  addCategory.addEventListener("click", () => {
+    pop.classList.remove("show-flex");
+    // to add to it
+  });
 }
