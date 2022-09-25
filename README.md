@@ -149,8 +149,8 @@ Achievements
   ✔️ Admin shall be able to ban clients from entering the website.<br/>
   ✔️ Admin shall be able to add / edit / delete seller (or service provider)<br/>
 
-  - Admin shall be able view general statistics using graphs (Best seller of the week / month / year, Top Client per week/ month / year, total number of products on the website, total number of sellers, total number of sellers, etc. )<br/>
-    ✔️ Admins shall have a Desktop App built using Electron.js<br/>
+  ❌ Admin shall be able view general statistics using graphs (Best seller of the week / month / year, Top Client per week/ month / year, total number of products on the website, total number of sellers, total number of sellers, etc. )<br/>
+  ✔️ Admins shall have a Desktop App built using Electron.js<br/>
 
 - Client:
 
@@ -158,15 +158,15 @@ Achievements
   ✔️ Client shall be able to favorite items and check favorited items.<br/>
   ✔️ Client shall be able to view single item.<br/>
 
-  - Client shall be able to search for a specific item by entering keywords.<br/>
-    ✔️ Client shall be able to add items to cart and then checkout (on checkout, we assume that the user paid so a message will be shown saying congratulations, payment succeeded).<br/>
-    ✔️ Client shall be able to edit profile.<br/>
-    ✔️ Client shall be able to add items to wishlist. Items in wishlist can be automatically go to checkout through on click.<br/>
-  - Client shall be able to send vouchers to their friends (optional through QR Code).<br/>
-  - Client shall be able to apply discounts when checking out.<br/>
-    ✔️ Clients shall be able to chat (not necessarily live) with the sellers.<br/>
-    ✔️ Clients shall be able to reset password (by sending it by email).<br/>
-    ✔️ Client shall have a web interface (typical website).<br/>
+  ❌ Client shall be able to search for a specific item by entering keywords.<br/>
+  ✔️ Client shall be able to add items to cart and then checkout (on checkout, we assume that the user paid so a message will be shown saying congratulations, payment succeeded).<br/>
+  ✔️ Client shall be able to edit profile.<br/>
+  ✔️ Client shall be able to add items to wishlist. Items in wishlist can be automatically go to checkout through on click.<br/>
+  ❌ Client shall be able to send vouchers to their friends (optional through QR Code).<br/>
+  ❌ Client shall be able to apply discounts when checking out.<br/>
+  ✔️ Clients shall be able to chat (not necessarily live) with the sellers.<br/>
+  ✔️ Clients shall be able to reset password (by sending it by email).<br/>
+  ✔️ Client shall have a web interface (typical website).<br/>
 
 - Seller:
 
@@ -174,8 +174,8 @@ Achievements
   ✔️ Seller shall be able to add products under category.<br/>
   ✔️ Seller shall be able to edit / delete products.<br/>
 
-  - Seller shall be able to check the revenue of a certain period of time (last week. last month, last year).<br/>
-    ✔️ Seller shall be able to create its own discount codes.<br/>
-    ✔️ Seller shall be able to view Top 5 Products Viewed.<br/>
-  - Seller shall be able to upload ads that will be displayed on the landing page of the website.<br/>
-    ✔️ Sellers shall have a web interface (with the look and feel of a panel with left menu).<br/>
+  ❌ Seller shall be able to check the revenue of a certain period of time (last week. last month, last year).<br/>
+  ✔️ Seller shall be able to create its own discount codes.<br/>
+  ✔️ Seller shall be able to view Top 5 Products Viewed.<br/>
+  ❌ Seller shall be able to upload ads that will be displayed on the landing page of the website.<br/>
+  ✔️ Sellers shall have a web interface (with the look and feel of a panel with left menu).<br/>
