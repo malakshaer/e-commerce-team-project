@@ -246,3 +246,82 @@ img {
   padding: 1rem;
   overflow: auto;
 }
+
+.nav-bar {
+  border-right: 3px solid #54549f;
+  height: 100vh;
+  padding: 6rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  background-color: #eee;
+}
+.nav-icon {
+  display: flex;
+  flex-direction: column;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 20%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+.nav-icon > img {
+  width: 2.5rem;
+}
+.nav-icon > p {
+  text-align: center;
+  font-size: 1rem;
+  color: #54549f;
+  font-weight: 700;
+}
+
+.nav-icon:hover {
+  background: lightgray;
+}
+
+.image {
+  display: flex;
+  width: 100%;
+  padding: 0 4rem;
+
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .spruce-trolley,
+  .spruce-trolley-spruce {
+    font-size: 2rem;
+  }
+
+  .user-profile-picture {
+    max-height: 2rem;
+    max-width: 2rem;
+    min-height: 1rem;
+    min-width: 1rem;
+  }
+
+  .nav-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-right: none;
+    border-top: 3px solid #54549f;
+    height: auto;
+    padding: 1rem 0.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .nav-icon {
+    padding: 0;
+  }
+  .nav-icon > img {
+    width: 2rem;
+  }
+}
