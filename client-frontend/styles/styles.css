@@ -420,3 +420,14 @@ img {
   flex-wrap: wrap;
   gap: 2rem;
 }
+
+/* favorites page */
+.back-section {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.back-section img {
+  width: 2.5rem;
+  cursor: pointer;
+}
