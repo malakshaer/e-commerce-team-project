@@ -85,8 +85,16 @@ document.getElementById("sign-up-btn").onclick = () => {
 };
 
 document.getElementById("sign-in-btn").onclick = () => {
-  document.getElementById("main-container").classList.remove("display-none");
-  document.getElementById("sign-container").classList.add("display-none");
+  let params = new URLSearchParams();
+  params.append("email", document.getElementById("mail").value);
+  params.append("password", document.getElementById("pass").value);
+
+  axios.post(signAPI, params).then((res) => {
+    if (res.data.id) {
+      window.location.replace("../index.html");
+      localStorage.setItem("user", JSON.stringify(res.data));
+    }
+  });
 };
 document.getElementById("valid").onclick = () => {
   let params = new URLSearchParams();
