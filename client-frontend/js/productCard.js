@@ -8,7 +8,7 @@ const productCard = (products) => {
         <div class="product-card-img-container clicked" id="${product.id}">
           <img
             class="product-card-img "
-            src="${product.picture}"
+            src=${product.picture_img}
             alt=""
             
           />
@@ -16,8 +16,8 @@ const productCard = (products) => {
         <div class="card-info">
           <div class="product-card-info">
             <div class="product-name-seller">
-              <p class="product-name">${product.product_name}</p>
-              <p class="seller-brand">${product.seller_name}</p>
+              <p class="product-name">${product.name}</p>
+            <!--   <p class="seller-brand">${product.seller_name}</p> -->
             </div>
   
             <div class="product-price">

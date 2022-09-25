@@ -1,50 +1,41 @@
-const sellers = [
-  {
-    id: 1,
-    name: "Gabtune",
-    img_url:
-      "https://robohash.org/rationedolorumveritatis.png?size=50x50&set=set1",
-  },
-  {
-    id: 2,
-    name: "Nlounge",
-    img_url: "https://robohash.org/ullamquasnemo.png?size=50x50&set=set1",
-  },
-  {
-    id: 3,
-    name: "Rhynyx",
-    img_url:
-      "https://robohash.org/architectoconsequunturmollitia.png?size=50x50&set=set1",
-  },
-  {
-    id: 4,
-    name: "Realfire",
-    img_url:
-      "https://robohash.org/voluptatemnecessitatibusmaxime.png?size=50x50&set=set1",
-  },
-  {
-    id: 5,
-    name: "Bluezoom",
-    img_url:
-      "https://robohash.org/odiototamconsequatur.png?size=50x50&set=set1",
-  },
-];
+// let categories;
+// let productss;
 
-const sellerCard = () => {
-  var sellersList = "";
-  sellers.map(
-    (seller, i) =>
-      (sellersList += `<div class="user-card">
-        <div class="user-card-img-name">
-          <div class="user-card-img-container">
-            <img width="100%" src="${seller.img_url}" alt="" />
-          </div>
-          <p class="user-card-name">${seller.name}</p>
-        </div>
-        <p href=""  class="user-card-edit" id='seller-${seller.id}'>more</p>
-      </div>
-      <section class="products seller-section" id='${seller.name}'></section>
-     `)
-  );
-  return sellersList;
-};
+// axios
+//   .post("http://localhost/e-commerce-team-project/server/api/sellers/all.php")
+//   .then((res) => {
+//     sellers = res.data;
+//   });
+// axios
+//   .post(
+//     "http://localhost/e-commerce-team-project/server/api/categories/get_categories.php"
+//   )
+//   .then((res) => {
+//     categories = res.data;
+//   });
+// axios
+//   .post(
+//     "http://localhost/e-commerce-team-project/server/api/products/get_all_products.php"
+//   )
+//   .then((res) => {
+//     productss = res.data;
+//   });
+
+// const sellerCard = () => {
+//   var sellersList = "";
+//   sellers.map(
+//     (seller, i) =>
+//       (sellersList += `<div class="user-card">
+//         <div class="user-card-img-name">
+//           <div class="user-card-img-container">
+//             <img width="100%" src="${seller.profile_img}" alt="" />
+//           </div>
+//           <p class="user-card-name">${seller.name}</p>
+//         </div>
+//         <p href=""  class="user-card-edit" id='seller-${seller.id}'>more</p>
+//       </div>
+//       <section class="products seller-section" id='${seller.id}'></section>
+//      `)
+//   );
+//   return sellersList;
+// };

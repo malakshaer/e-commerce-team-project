@@ -36,7 +36,13 @@ document.getElementById("profile").onclick = () => {
       </div>
       <button class="sign-btn" id='sign-up-btn'>Update</button>
     </div>
-  </div>`;
+  </div>
+  <div id="logout-container">
+  <button class="sign-btn" id="logout">LogOut</button></div>`;
 
-  document.getElementById("sign-body").innerHTML = signUp();
+  // document.getElementById("sign-body").innerHTML = signUp();
+  document.getElementById("logout").onclick = () => {
+    localStorage.removeItem("user");
+    location.href = "../sgin.html";
+  };
 };
