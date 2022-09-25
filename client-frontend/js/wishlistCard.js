@@ -1,13 +1,14 @@
-const wishlistCard = () => {
+const wishlistCard = (products) => {
   var productList = "";
   products.map(
     (product, i) =>
       (productList += `<div class="product-card">
-      <div class="product-card-img-container">
+      <div class="product-card-img-container clicked" id="${product.id}">
         <img
-          class="product-card-img"
+          class="product-card-img "
           src="${product.picture}"
           alt=""
+          
         />
       </div>
       <div class="card-info">
@@ -18,7 +19,7 @@ const wishlistCard = () => {
           </div>
 
           <div class="product-price">
-            <p class="price">Price</p>
+            <p class="price">${product.price}</p>
             <p class="discount">Discount</p>
           </div>
           <div class="product-card-icons">
@@ -38,5 +39,3 @@ const wishlistCard = () => {
   );
   return productList;
 };
-
-document.getElementById("wishlist-products-list").innerHTML = wishlistCard();

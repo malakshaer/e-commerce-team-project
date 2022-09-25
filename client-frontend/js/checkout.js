@@ -26,4 +26,3 @@ const checkout = () => {
   </div>`;
   return checkout_section;
 };
-document.getElementById("checkout").innerHTML = checkout();

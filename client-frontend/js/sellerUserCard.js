@@ -48,5 +48,3 @@ const sellerCard = () => {
   );
   return sellersList;
 };
-
-document.getElementById("sellers-list").innerHTML = sellerCard();

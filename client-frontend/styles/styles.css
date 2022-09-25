@@ -102,7 +102,6 @@ img {
   font-weight: 700;
   color: #e21a58;
 }
-
 .product-card-icons {
   display: flex;
   gap: 3rem;
@@ -247,6 +246,7 @@ img {
   padding: 1rem;
   overflow: auto;
 }
+
 .nav-bar {
   border-right: 3px solid #54549f;
   height: 100vh;
@@ -403,7 +403,118 @@ img {
   max-width: 60rem;
 }
 .cart-content .checkout-section {
-  align-self: center;
   justify-self: center;
   margin-bottom: 10rem;
+}
+
+/* top in more */
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.more-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* favorites page */
+.back-section {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.back-section img {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+/* sign */
+.sign-body {
+  padding: 2rem 0rem;
+}
+
+.sign-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 24rem;
+  margin: auto;
+  padding: 2rem;
+  align-items: center;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.25);
+  background: #fbfbfb;
+}
+@media screen and (max-width: 25rem) {
+  .sign-container {
+    border: 0px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    background: white;
+  }
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+input {
+  background-color: #fbfbfb;
+  font-size: 1.2rem;
+  box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.25);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  border: none;
+}
+.sign-btn {
+  width: fit-content;
+  padding: 0.4rem 2rem;
+  font-size: 1.2rem;
+  background: #e21a58;
+  color: white;
+  border-radius: 0.4rem;
+  border: none;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  cursor: pointer;
+}
+.have-account {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
+
+.product-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.texts {
+  color: #54549f;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkout-section {
+  padding-top: 2rem;
 }

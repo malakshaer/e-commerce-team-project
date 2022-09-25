@@ -50,12 +50,13 @@ const homeRender = () => {
     <!-- end ads section -->`;
   slideShow();
   document.getElementById("products-list").innerHTML = productCard(products);
-  products.map(
-    (product, i) =>
-      (document.getElementById(product.id).onclick = () => {
-        alert(product.id);
-      })
-  );
+  // products.map(
+  //   (product, i) =>
+  //     (document.getElementById(product.id).onclick = () => {
+  //       alert(product.id);
+  //     })
+  // );
+  clicked();
 };
 
 const sellerRender = () => {
@@ -81,9 +82,10 @@ const sellerRender = () => {
   sellers.map(
     (seller) =>
       (document.getElementById(`seller-${seller.id}`).onclick = () => {
-        alert(seller.id);
+        storeProduct(seller.id);
       })
   );
+  clicked();
 };
 
 const searchRender = () => {
@@ -101,28 +103,54 @@ const searchRender = () => {
     <section class="products" id="products-list"></section>
     <!-- end ads section -->`;
   document.getElementById("products-list").innerHTML = productCard(products);
-  products.map(
-    (product, i) =>
-      (document.getElementById(product.id).onclick = () => {
-        alert(product.id);
-      })
-  );
+
+  clicked();
 };
 const cartRender = () => {
   document.getElementById("app-body").innerHTML = `
 <h1>Your Cart<h1>
-<div class= cart-content>
+<div class= "cart-content">
 
     <section class="products" id="checkout-list"></section>
-    <section id ="checkout"></section>
+    <section class="checkout-section" id ="checkout"></section>
     <div>`;
   document.getElementById("checkout-list").innerHTML = checkoutCard(products);
   document.getElementById("checkout").innerHTML = checkout();
+  clicked();
+};
+const moreRender = () => {
+  document.getElementById("app-body").innerHTML = `
+<div class="top-section">
+<h1>Favorite Items</h1>
+<button class="button" id="favorite-page">More</button>
+</div>
+<div class="more-lists" id="favorite-products-list"><div>
+`;
 
-  products.map(
-    (product, i) =>
-      (document.getElementById(product.id).onclick = () => {
-        alert(product.id);
-      })
+  document.getElementById("favorite-products-list").innerHTML = favoriteCard(
+    products.slice(0, 3)
   );
+
+  const wish = document.createElement("section");
+  wish.innerHTML = `<div class="top-section">
+<h1>Wishlist</h1>
+<button class="button" id="wishlist-page">More</button>
+</div>
+<div class="more-lists" id="wishlist-products-list"><div>
+`;
+  document.getElementById("app-body").append(wish);
+
+  document.getElementById("wishlist-products-list").innerHTML = wishlistCard(
+    products.slice(0, 3)
+  );
+
+  document.getElementById("favorite-page").onclick = () => {
+    position = "favorite";
+    renderFavorite();
+  };
+  document.getElementById("wishlist-page").onclick = () => {
+    position = "wishlist";
+    renderWishlist();
+  };
+  clicked();
 };
