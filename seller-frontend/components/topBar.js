@@ -10,7 +10,7 @@ const navBar = () => {
           <div class="top-nav-logo-container">
             <img src="Images/Logo-horizontal.svg" alt="Logo" />
           </div>
-          <div class="profile-pic">
+          <div class="profile-pic" id="profile-img" title="Sign Out">
             <img src="${user.img_url}" alt="profile picture" />
           </div>
         `)
