@@ -8,10 +8,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $email = $_POST["email"];
     $password = $_POST["password"];
     $birthday =$_POST["birthday"];
-    $user_type_id = 2;
+    $user_type_id = 1;
     $is_ban = 0;
-    $code = rand(0,10)*100;
-    $code .= rand(0,10)*100;
+    $code = rand(0,10)*10;
+    $code .= rand(0,10)*10;
     $subject = "Signup | Verification";
     $message = 
     "Thanks for signing up!
@@ -31,15 +31,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $query->bind_param("sssssss", $name, $email,$passHash,$code,$birthday,$user_type_id,$is_ban);
     $query->execute();
 
+    $last_id = $mysqli->insert_id;
 
-    if($query)
-    {
-    echo "Registration done successfully!";
-    
+    $query2 = "SELECT * from users WHERE id=?";
+    $query =$mysqli->prepare($query2);
+    $query->bind_param("s",$last_id);
+    $query->execute();
+    $array = $query->get_result();
+  
+    $response =[];
+    while($value = $array->fetch_assoc()){
+      $response[] = $value;
     }
-    else
-    {
-    echo "Something went wrong while registration!";
+  
+  
+    
+    if($response){
+        echo json_encode($response[0]); 
+    }else{
+        echo "error";
     }
     
 }

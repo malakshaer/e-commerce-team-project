@@ -9,11 +9,12 @@ include("../../connection.php");
   $price =$_POST["price"];
   $discount_price = $_POST["discount_price"];
   $picture_img = $_POST["picture_img"];
+  $category_id = $_POST["category_id"];
   
 
-  $sql = "INSERT INTO products( name,description,price,discount_price,picture_img) VALUE (?,?,?,?,?)";
+  $sql = "INSERT INTO products( name,description,price,discount_price,picture_img,category_id) VALUE (?,?,?,?,?,?)";
   $query =$mysqli->prepare($sql);
-  $query->bind_param("sssss",$name, $description, $price,$discount_price,$picture_img);
+  $query->bind_param("ssssss",$name, $description, $price,$discount_price,$picture_img,$category_id);
   $query->execute();
 
   if($query){

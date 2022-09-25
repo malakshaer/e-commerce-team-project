@@ -4,10 +4,10 @@ include("../../connection.php");
 
 
 
-  $client_id = $_GET["client_id"];
+  $id = $_POST["id"];
   
-  $query =$mysqli->prepare("DELETE FROM orders WHERE id = ?");
-  $query->bind_param('i', $client_id);
+  $query =$mysqli->prepare("DELETE FROM categories WHERE id = ?");
+  $query->bind_param('i', $id);
   $array = $query->get_result();
 
   $query->execute();
@@ -21,4 +21,3 @@ include("../../connection.php");
 
 
 ?>
-
