@@ -28,7 +28,7 @@ function categoriesRender() {
     categories.map((category) => {
       categoriesList += `
         <div class="categories-content pages-content">
-          <h2>${category.name}</h2>
+          <h2>${category}</h2>
           <h3>remove</h3>
         </div>
         `;

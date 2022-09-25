@@ -8,193 +8,210 @@ const users = [
 
 // Used for categories list
 // Used for categories select in products
-const categories = [
-  {
-    name: "Site Furnishings",
-  },
-  {
-    name: "Soft Flooring and Base",
-  },
-  {
-    name: "RF Shielding",
-  },
-  {
-    name: "Drilled Shafts",
-  },
-  {
-    name: "Roofing (Metal)",
-  },
-  {
-    name: "Fire Sprinkler System",
-  },
-  {
-    name: "Temp Fencing, Decorative Fencing and Gates",
-  },
-  {
-    name: "Drywall & Acoustical (MOB)",
-  },
-  {
-    name: "Landscaping & Irrigation",
-  },
-  {
-    name: "Doors, Frames & Hardware",
-  },
-  {
-    name: "Roofing (Asphalt)",
-  },
-  {
-    name: "Casework",
-  },
-  {
-    name: "Overhead Doors",
-  },
-  {
-    name: "Exterior Signage",
-  },
-  {
-    name: "Drywall & Acoustical (MOB)",
-  },
-  {
-    name: "Elevator",
-  },
-  {
-    name: "Sitework & Site Utilities",
-  },
-  {
-    name: "Doors, Frames & Hardware",
-  },
-  {
-    name: "Temp Fencing, Decorative Fencing and Gates",
-  },
-  {
-    name: "Rebar & Wire Mesh Install",
-  },
-];
-
-// used for products list
 const products = [
   {
-    name: "Vinegar - Raspberry",
-    price: "$8.04",
-    discount: 37,
-    img: "http://dummyimage.com/145x100.png/5fa2dd/ffffff",
+    name: "Avalon",
+    category: "Mazda",
+    price: "$192.81",
+    img: "https://robohash.org/quirerumpraesentium.png?size=50x50&set=set1",
   },
   {
-    name: "Apple - Royal Gala",
-    price: "$8.29",
-    discount: 39,
-    img: "http://dummyimage.com/110x100.png/5fa2dd/ffffff",
+    name: "Relay",
+    category: "Chevrolet",
+    price: "$52.88",
+    img: "https://robohash.org/autveniamsoluta.png?size=50x50&set=set1",
   },
   {
-    name: "Energy Drink - Franks Pineapple",
-    price: "$8.86",
-    discount: 10,
-    img: "http://dummyimage.com/202x100.png/5fa2dd/ffffff",
+    name: "Quest",
+    category: "Toyota",
+    price: "$79.54",
+    img: "https://robohash.org/modiautnisi.png?size=50x50&set=set1",
   },
   {
-    name: "Tofu - Firm",
-    price: "$1.39",
-    discount: 27,
-    img: "http://dummyimage.com/248x100.png/dddddd/000000",
+    name: "Traverse",
+    category: "Chevrolet",
+    price: "$3.98",
+    img: "https://robohash.org/etculpapraesentium.png?size=50x50&set=set1",
   },
   {
-    name: "Beans - Green",
-    price: "$7.07",
-    discount: 65,
-    img: "http://dummyimage.com/117x100.png/5fa2dd/ffffff",
+    name: "5 Series",
+    category: "BMW",
+    price: "$167.44",
+    img: "https://robohash.org/rerumautsed.png?size=50x50&set=set1",
   },
   {
-    name: "Piping - Bags Quizna",
-    price: "$2.13",
-    discount: 28,
-    img: "http://dummyimage.com/210x100.png/dddddd/000000",
+    name: "Passport",
+    category: "Chevrolet",
+    price: "$194.17",
+    img: "https://robohash.org/providentquisuscipit.png?size=50x50&set=set1",
   },
   {
-    name: "Milk - Homo",
-    price: "$2.84",
-    discount: 45,
-    img: "http://dummyimage.com/129x100.png/5fa2dd/ffffff",
+    name: "Altima",
+    category: "Nissan",
+    price: "$36.74",
+    img: "https://robohash.org/exercitationemnostrumaccusantium.png?size=50x50&set=set1",
   },
   {
-    name: "Sachet",
-    price: "$1.05",
-    discount: 47,
-    img: "http://dummyimage.com/158x100.png/dddddd/000000",
+    name: "Sportage",
+    category: "Kia",
+    price: "$17.91",
+    img: "https://robohash.org/eaquenumquamaut.png?size=50x50&set=set1",
   },
   {
-    name: "Shrimp - 16 - 20 Cooked, Peeled",
-    price: "$5.71",
-    discount: 57,
-    img: "http://dummyimage.com/164x100.png/dddddd/000000",
+    name: "RX",
+    category: "Lexus",
+    price: "$17.48",
+    img: "https://robohash.org/sequiquonumquam.png?size=50x50&set=set1",
   },
   {
-    name: "Shrimp - 16/20, Iqf, Shell On",
-    price: "$7.99",
-    discount: 32,
-    img: "http://dummyimage.com/106x100.png/ff4444/ffffff",
+    name: "SL-Class",
+    category: "Mercedes-Benz",
+    price: "$117.11",
+    img: "https://robohash.org/voluptatesminustempora.png?size=50x50&set=set1",
   },
   {
-    name: "Cheese - Taleggio D.o.p.",
-    price: "$3.26",
-    discount: 63,
-    img: "http://dummyimage.com/128x100.png/dddddd/000000",
+    name: "Cutlass Cruiser",
+    category: "Toyota",
+    price: "$164.79",
+    img: "https://robohash.org/minuscumaccusamus.png?size=50x50&set=set1",
   },
   {
-    name: "Vinegar - Rice",
-    price: "$3.80",
-    discount: 31,
-    img: "http://dummyimage.com/119x100.png/ff4444/ffffff",
+    name: "Cherokee",
+    category: "Chevrolet",
+    price: "$125.40",
+    img: "https://robohash.org/rerumvoluptasamet.png?size=50x50&set=set1",
   },
   {
-    name: "Tomato - Green",
-    price: "$2.42",
-    discount: 5,
-    img: "http://dummyimage.com/218x100.png/ff4444/ffffff",
+    name: "I",
+    category: "Toyota",
+    price: "$170.79",
+    img: "https://robohash.org/etsedfugit.png?size=50x50&set=set1",
   },
   {
-    name: "Pastry - Apple Large",
-    price: "$5.38",
-    discount: 38,
-    img: "http://dummyimage.com/137x100.png/dddddd/000000",
+    name: "Yukon",
+    category: "Chevrolet",
+    price: "$166.68",
+    img: "https://robohash.org/atmaximeassumenda.png?size=50x50&set=set1",
   },
   {
-    name: "Pastry - Apple Muffins - Mini",
-    price: "$0.77",
-    discount: 1,
-    img: "http://dummyimage.com/136x100.png/dddddd/000000",
+    name: "X5",
+    category: "Toyota",
+    price: "$5.09",
+    img: "https://robohash.org/quaeratipsaquia.png?size=50x50&set=set1",
   },
   {
-    name: "Scallops - Live In Shell",
-    price: "$8.23",
-    discount: 66,
-    img: "http://dummyimage.com/230x100.png/ff4444/ffffff",
+    name: "Milan",
+    category: "Toyota",
+    price: "$96.73",
+    img: "https://robohash.org/uteosporro.png?size=50x50&set=set1",
   },
   {
-    name: "Cheese - Goat",
-    price: "$9.97",
-    discount: 38,
-    img: "http://dummyimage.com/168x100.png/ff4444/ffffff",
+    name: "LR4",
+    category: "Land Rover",
+    price: "$43.98",
+    img: "https://robohash.org/occaecatidoloremin.png?size=50x50&set=set1",
   },
   {
-    name: "Beets - Candy Cane, Organic",
-    price: "$3.87",
-    discount: 23,
-    img: "http://dummyimage.com/195x100.png/5fa2dd/ffffff",
+    name: "G-Class",
+    category: "Mercedes-Benz",
+    price: "$21.40",
+    img: "https://robohash.org/eligendidictainventore.png?size=50x50&set=set1",
   },
   {
-    name: "Raisin - Dark",
-    price: "$2.21",
-    discount: 1,
-    img: "http://dummyimage.com/198x100.png/ff4444/ffffff",
+    name: "LX",
+    category: "Toyota",
+    price: "$46.44",
+    img: "https://robohash.org/addoloreveritatis.png?size=50x50&set=set1",
   },
   {
-    name: "Cheese - Mozzarella, Shredded",
-    price: "$4.68",
-    discount: 9,
-    img: "http://dummyimage.com/111x100.png/ff4444/ffffff",
+    name: "Vantage",
+    category: "Aston Martin",
+    price: "$155.61",
+    img: "https://robohash.org/voluptassaepealiquam.png?size=50x50&set=set1",
+  },
+  {
+    name: "Nitro",
+    category: "Toyota",
+    price: "$175.78",
+    img: "https://robohash.org/hicquidistinctio.png?size=50x50&set=set1",
+  },
+  {
+    name: "GTI",
+    category: "Volkswagen",
+    price: "$102.09",
+    img: "https://robohash.org/nesciuntaccusamusea.png?size=50x50&set=set1",
+  },
+  {
+    name: "XK",
+    category: "Toyota",
+    price: "$146.54",
+    img: "https://robohash.org/autemconsequaturet.png?size=50x50&set=set1",
+  },
+  {
+    name: "PT Cruiser",
+    category: "Toyota",
+    price: "$113.32",
+    img: "https://robohash.org/ducimusestet.png?size=50x50&set=set1",
+  },
+  {
+    name: "XJ",
+    category: "Jaguar",
+    price: "$100.40",
+    img: "https://robohash.org/blanditiisearumcommodi.png?size=50x50&set=set1",
+  },
+  {
+    name: "S10",
+    category: "Chevrolet",
+    price: "$32.77",
+    img: "https://robohash.org/quoetnihil.png?size=50x50&set=set1",
+  },
+  {
+    name: "Sierra 1500",
+    category: "Toyota",
+    price: "$181.22",
+    img: "https://robohash.org/etquissoluta.png?size=50x50&set=set1",
+  },
+  {
+    name: "M3",
+    category: "BMW",
+    price: "$177.74",
+    img: "https://robohash.org/voluptasvoluptasrepudiandae.png?size=50x50&set=set1",
+  },
+  {
+    name: "RX-7",
+    category: "BMW",
+    price: "$19.28",
+    img: "https://robohash.org/praesentiumreprehenderiteos.png?size=50x50&set=set1",
+  },
+  {
+    name: "9000",
+    category: "Chevrolet",
+    price: "$19.58",
+    img: "https://robohash.org/noncorporissapiente.png?size=50x50&set=set1",
   },
 ];
 
+const uniqueCategories = {};
+let i = 0;
+// getting unique categories from products
+products.map((product) => {
+  uniqueCategories[product.category] = ++i;
+});
+
+// Creating an array of categories
+const categories = Object.keys(uniqueCategories);
+
+// console.log(categories[0]);
+
+// let filteredProducts = products.filter((x) => x.category === "Mazda");
+// console.log(filteredProducts);
+// creating a new array
+// const filteredProducts = [];
+// categories.forEach((cat) => {
+//   filteredProducts.push(products.filter((product) => product.category == cat));
+// });
+
+// console.log(filteredProducts);
 // revenues missing
 
 // used for discounts list

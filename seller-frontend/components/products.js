@@ -17,7 +17,6 @@ function productsRender() {
 
         <div class="pages-select-container">
           <select name="categories" id="categories-select">
-            
           </select>
         </div>
 
@@ -32,16 +31,16 @@ function productsRender() {
 
     categories.map((category) => {
       categoriesSelects += `
-          <option value="${category.name}">${category.name}</option>
+          <option value="${category}">${category}</option>
         `;
     });
     return categoriesSelects;
   }
 
-  function productsContent() {
+  function productsContent(selectedOption) {
+    console.log(selectedOption);
     let productsList = "";
-
-    products.map((product) => {
+    selectedOption.map((product) => {
       productsList += `
           <div class="products-content pages-content">
             <div class="products-content-img">
@@ -49,7 +48,8 @@ function productsRender() {
             </div>
             <div class="product-description">
               <p>${product.name}</p>
-              <p>${product.price} <span>${product.discount}</span></p>
+              <p>${product.price} 
+              </p>
             </div>
             <div class="product-control">
               <div class="product-control-icon">
@@ -64,8 +64,25 @@ function productsRender() {
     });
     return productsList;
   }
+  let initialCategory = categories[0];
+  let filteredProducts = [];
 
   pageWrapper.innerHTML = productsHeader;
-  document.getElementById("products-content").innerHTML = productsContent();
+  let initialProducts = products.filter(
+    (product) => product.category == initialCategory
+  );
+
+  document.getElementById("products-content").innerHTML =
+    productsContent(initialProducts);
+  const selectedOption = document.getElementById("categories-select");
+  selectedOption.onchange = function () {
+    filteredProducts = products.filter(
+      (product) => product.category == selectedOption.value
+    );
+    // console.log(filteredProducts);
+    document.getElementById("products-content").innerHTML =
+      productsContent(filteredProducts);
+  };
+
   document.getElementById("categories-select").innerHTML = categoriesSelect();
 }
