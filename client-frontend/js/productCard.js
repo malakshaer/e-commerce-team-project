@@ -21,7 +21,7 @@ const productCard = (products) => {
             </div>
   
             <div class="product-price">
-              <p class="price">${product.price}</p>
+              <p class="price">$${product.price}</p>
               <p class="discount">Discount</p>
             </div>
             <div class="product-card-icons">

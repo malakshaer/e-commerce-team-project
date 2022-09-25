@@ -143,7 +143,7 @@ const cartRender = () => {
     <section class="products" id="checkout-list"></section>
     <section class="checkout-section" id ="checkout"></section>
     <div>`;
-  document.getElementById("checkout-list").innerHTML = checkoutCard(products);
+  document.getElementById("checkout-list").innerHTML = checkoutCard(productss);
   document.getElementById("checkout").innerHTML = checkout();
   clicked();
 };
