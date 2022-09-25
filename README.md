@@ -127,6 +127,10 @@ repo link : https://github.com/abdallahmoubarak/e-commerce-team-project
 - Substage 3 : developing api's using (php)
 - Substage 4 : fetching api and fitting them in frontend
 
+###### repo graph
+
+![](./src/repo-graph.png?style=center)
+
 ---
 
 #### Stage 5: Project flow mini report
