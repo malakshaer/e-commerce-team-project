@@ -480,3 +480,25 @@ input {
   -o-border-radius: 0.4rem;
   border: none;
 }
+.sign-btn {
+  width: fit-content;
+  padding: 0.4rem 2rem;
+  font-size: 1.2rem;
+  background: #e21a58;
+  color: white;
+  border-radius: 0.4rem;
+  border: none;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  cursor: pointer;
+}
+.have-account {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
