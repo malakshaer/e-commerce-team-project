@@ -131,7 +131,7 @@ const searchRender = () => {
     <!-- start ads section -->
     <section class="products" id="products-list"></section>
     <!-- end ads section -->`;
-  document.getElementById("products-list").innerHTML = productCard(products);
+  document.getElementById("products-list").innerHTML = productCard(productss);
 
   clicked();
 };

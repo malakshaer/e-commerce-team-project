@@ -1,5 +1,5 @@
 // let categories;
-// let productss;
+let productss;
 
 // axios
 //   .post("http://localhost/e-commerce-team-project/server/api/sellers/all.php")
@@ -13,13 +13,13 @@
 //   .then((res) => {
 //     categories = res.data;
 //   });
-// axios
-//   .post(
-//     "http://localhost/e-commerce-team-project/server/api/products/get_all_products.php"
-//   )
-//   .then((res) => {
-//     productss = res.data;
-//   });
+axios
+  .post(
+    "http://localhost/e-commerce-team-project/server/api/products/get_all_products.php"
+  )
+  .then((res) => {
+    productss = res.data;
+  });
 
 // const sellerCard = () => {
 //   var sellersList = "";
