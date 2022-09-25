@@ -189,3 +189,60 @@ img {
 .total-price {
   color: #e21a58;
 }
+
+/* nav bar */
+.main-container {
+  display: flex;
+  position: relative;
+}
+/* Add styles here to customize the appearance of your app */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 1.2rem;
+  border-bottom: 3px solid #54549f;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spruce-trolley {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 2.25rem;
+  color: #e21a58;
+}
+.spruce-trolley-spruce {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 2.25rem;
+  color: #54549f;
+}
+
+.user-profile-picture {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #54549f;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  overflow: hidden;
+  height: 100vh;
+}
+.app-body {
+  flex: 1 1;
+  padding: 1rem;
+  overflow: auto;
+}
