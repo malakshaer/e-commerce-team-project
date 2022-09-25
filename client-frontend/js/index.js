@@ -118,3 +118,39 @@ const cartRender = () => {
   document.getElementById("checkout").innerHTML = checkout();
   clicked();
 };
+const moreRender = () => {
+  document.getElementById("app-body").innerHTML = `
+<div class="top-section">
+<h1>Favorite Items</h1>
+<button class="button" id="favorite-page">More</button>
+</div>
+<div class="more-lists" id="favorite-products-list"><div>
+`;
+
+  document.getElementById("favorite-products-list").innerHTML = favoriteCard(
+    products.slice(0, 3)
+  );
+
+  const wish = document.createElement("section");
+  wish.innerHTML = `<div class="top-section">
+<h1>Wishlist</h1>
+<button class="button" id="wishlist-page">More</button>
+</div>
+<div class="more-lists" id="wishlist-products-list"><div>
+`;
+  document.getElementById("app-body").append(wish);
+
+  document.getElementById("wishlist-products-list").innerHTML = wishlistCard(
+    products.slice(0, 3)
+  );
+
+  document.getElementById("favorite-page").onclick = () => {
+    position = "favorite";
+    renderFavorite();
+  };
+  document.getElementById("wishlist-page").onclick = () => {
+    position = "wishlist";
+    renderWishlist();
+  };
+  clicked();
+};
