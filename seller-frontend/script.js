@@ -1,1 +1,1 @@
-categoriesRender();
+onLaunch();

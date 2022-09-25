@@ -191,9 +191,9 @@ const products = [
   },
 ];
 
+// getting unique categories from products
 const uniqueCategories = {};
 let i = 0;
-// getting unique categories from products
 products.map((product) => {
   uniqueCategories[product.category] = ++i;
 });
@@ -201,17 +201,6 @@ products.map((product) => {
 // Creating an array of categories
 const categories = Object.keys(uniqueCategories);
 
-// console.log(categories[0]);
-
-// let filteredProducts = products.filter((x) => x.category === "Mazda");
-// console.log(filteredProducts);
-// creating a new array
-// const filteredProducts = [];
-// categories.forEach((cat) => {
-//   filteredProducts.push(products.filter((product) => product.category == cat));
-// });
-
-// console.log(filteredProducts);
 // revenues missing
 
 // used for discounts list

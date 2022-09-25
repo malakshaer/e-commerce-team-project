@@ -6,14 +6,7 @@ const navViewsBtn = document.getElementById("nav-views-btn");
 const navAdsBtn = document.getElementById("nav-ads-btn");
 const navInboxBtn = document.getElementById("nav-inbox-btn");
 
-// the first shown in the body
-// document.getElementById("app-body").innerHTML = uList("Sellers", "+");
-// document.getElementById("users-list").innerHTML = userCard(sellers);
-
-// loopingOverUserCards();
-
-// clicking on categories in nav bar
-navCategoriesBtn.onclick = () => {
+function onLaunch() {
   navCategoriesBtn.children[0].src = "./Images/categories-icon.svg";
   navProductsBtn.children[0].src = "./Images/products-icon-active.svg";
   navRevenueBtn.children[0].src = "./Images/revenue-icon-active.svg";
@@ -31,6 +24,11 @@ navCategoriesBtn.onclick = () => {
   navInboxBtn.classList.remove("active");
 
   categoriesRender();
+}
+
+// clicking on categories in nav bar
+navCategoriesBtn.onclick = () => {
+  onLaunch();
 };
 
 //clicking on products nav bar
