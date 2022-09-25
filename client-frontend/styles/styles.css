@@ -121,3 +121,71 @@ img {
   text-align: center;
   cursor: pointer;
 }
+
+.button {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  background-color: #e21a58;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+  border-style: none;
+}
+
+.input {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-style: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.5);
+}
+.card-total {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #54549f;
+}
+
+.apply-btn {
+  font-size: 1rem;
+}
+
+.buy-btn {
+  width: 10rem;
+}
+
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 25rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--gainsboro);
+  padding: 1rem;
+  color: #54549f;
+}
+
+.checkout-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.checkout-voucher {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  flex: 1 1;
+}
+
+.quantity-input {
+  max-width: 12rem;
+}
+
+.voucher-input {
+  max-width: 13rem;
+}
+
+.total-price {
+  color: #e21a58;
+}
