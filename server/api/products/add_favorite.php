@@ -4,12 +4,12 @@ include("../../connection.php");
 
 
 
-  $products_id = $_POST["products_id"];
-  $users_id = $_POST["users_id"];
+  $product_id = $_POST["product_id"];
+  $user_id = $_POST["user_id"];
 
-  $sql = "INSERT INTO favorites(users_id,products_id) VALUE (?,?)";
+  $sql = "INSERT INTO favorites(client_id,product_id) VALUE (?,?)";
   $query = $mysqli->prepare($sql);
-  $query->bind_param("ss",$users_id,$products_id);
+  $query->bind_param("ss",$user_id,$product_id);
   
   $query->execute();
 
