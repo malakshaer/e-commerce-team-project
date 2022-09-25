@@ -406,3 +406,17 @@ img {
   justify-self: center;
   margin-bottom: 10rem;
 }
+
+/* top in more */
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.more-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
