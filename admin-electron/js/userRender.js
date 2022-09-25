@@ -1,6 +1,7 @@
 const userRender = (id) => {
   //   axios.fetch("");
-  user = sellers.filter((seller) => seller.id == id)[0];
+  user = sellers.concat(clients).filter((seller) => seller.id == id)[0];
+
   return `<div class='edit-page'>
     <div class='edit-head'>    
     <div>Edit ${user.name}</div>
@@ -10,7 +11,7 @@ const userRender = (id) => {
 </div>
     <div class="edit-user-profile-img">
     <label for="img-input" class="img-label cursor-pointer">
-    <img class='label-img' id='label-img' alt='' src='${user.img_url}'>
+    <img class='label-img' id='label-img' alt='' src='${user.profile_img}'>
     </label>
     <input class="file-input" id="img-input" type="file" />
     </div>

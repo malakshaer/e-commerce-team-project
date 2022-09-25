@@ -1,6 +1,10 @@
 document.getElementById("logout").onclick = () => {
   document.getElementById("sign-container").classList.toggle("display-none");
   document.getElementById("main-container").classList.toggle("display-none");
+  localStorage.removeItem("user");
+  document.getElementById("main-container").classList.add("display-none");
+  document.getElementById("sign-container").classList.remove("display-none");
+  document.getElementById("sign-body").innerHTML = signIn();
 };
 
 document.getElementById("menu-back").onclick = () => {

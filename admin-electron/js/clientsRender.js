@@ -1,6 +1,9 @@
 const clientsRender = () => {
   document.getElementById("app-body").innerHTML = uList("Clients");
-  document.getElementById("users-list").innerHTML = userCard(clients);
 
-  loopingOverUserCards();
+  axios.get(getClientsAPI).then((res) => {
+    document.getElementById("users-list").innerHTML = userCard(res.data);
+
+    loopingOverUserCards();
+  });
 };
