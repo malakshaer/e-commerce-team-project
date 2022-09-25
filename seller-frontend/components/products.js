@@ -96,6 +96,8 @@ function productsRender() {
 
   document.getElementById("categories-select").innerHTML = categoriesSelect();
 
+  let addProduct =
+    "http://localhost/e-commerce-team-project/server/api/products/add.php";
   const pop = document.getElementById("popup-id");
   const addIcon = document.getElementById("add-icon");
   const addCategory = document.getElementById("add-category");
@@ -108,6 +110,16 @@ function productsRender() {
   });
   addCategory.addEventListener("click", () => {
     pop.classList.remove("show-flex");
-    // to add to it
+
+    params = new URLSearchParams();
+    params.append("name", document.getElementById("name"));
+    params.append("price", document.getElementById("price"));
+    params.append("category_id", localStorage.getItem("id"));
+    params.append("picture_img", "url");
+    params.append("description", "");
+    params.append("discount_price", 0);
+    axios.post(addProduct, params).then((res) => {
+      // console.log(res);
+    });
   });
 }

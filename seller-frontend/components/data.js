@@ -1,3 +1,22 @@
+let newCategories;
+let newProducts;
+let getCategories =
+  "http://localhost/e-commerce-team-project/server/api/categories/get_categories.php";
+
+params = new URLSearchParams();
+params.append("seller_id", localStorage.getItem("id"));
+axios.post(getCategories, params).then((res) => {
+  newCategories = res.data;
+  console.log(newCategories);
+});
+
+let getProducts =
+  "http://localhost/e-commerce-team-project/server/api/products/all.php?category_id=3";
+axios.post(getProducts, params).then((res) => {
+  newProducts = res.data;
+  console.log(newProducts);
+});
+
 // used for top-nav
 const users = [
   {

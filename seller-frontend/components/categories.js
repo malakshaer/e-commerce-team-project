@@ -21,8 +21,8 @@ function categoriesRender() {
         <div class="popup-close-btn" id="close-popup">
           <img src="./Images/x-icon.svg" alt="Close Icon" />
         </div>
-        <label for="category">Category: </label>
-        <input type="text" id="category"/>
+        <label for="category-input">Category: </label>
+        <input type="text" id="category-input"/>
         <button id="add-category">Add</button>
       </div>
 
@@ -49,7 +49,8 @@ function categoriesRender() {
   pageWrapper.innerHTML = categoriesHeader;
   document.getElementById("categories-content").innerHTML +=
     categoriesAvailable();
-
+  let addCategories =
+    "http://localhost/e-commerce-team-project/server/api/categories/add.php";
   const pop = document.getElementById("popup-id");
   const addIcon = document.getElementById("add-icon");
   const addCategory = document.getElementById("add-category");
@@ -62,6 +63,12 @@ function categoriesRender() {
   });
   addCategory.addEventListener("click", () => {
     pop.classList.remove("show-flex");
-    // to add to it
+
+    let params = new URLSearchParams();
+    params.append("name", document.getElementById("category-input").value);
+    params.append("seller_id", localStorage.getItem("id"));
+    axios.post(addCategories, params).then((res) => {
+      console.log(res);
+    });
   });
 }
