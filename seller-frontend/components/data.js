@@ -1,6 +1,7 @@
 let newCategories;
 let newProducts;
 let newAds;
+let newMessages;
 let getCategories =
   "http://localhost/e-commerce-team-project/server/api/categories/get_categories.php";
 
@@ -23,6 +24,16 @@ let getAds =
 axios.post(getAds, params).then((res) => {
   newAds = res.data;
   console.log(newAds);
+});
+
+let getMessages =
+  "http://localhost/e-commerce-team-project/server/api/messages/get_message.php";
+params = new URLSearchParams();
+params.append("seller_id", 39);
+params.append("client_id", 28);
+axios.post(getMessages, params).then((res) => {
+  newMessages = res.data;
+  console.log(newMessages);
 });
 
 // used for top-nav

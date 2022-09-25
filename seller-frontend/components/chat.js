@@ -47,6 +47,8 @@ function chatRender() {
   pageWrapper.innerHTML = chatHeader;
   document.getElementById("chat-box").innerHTML = chatContent();
 
+  let sendMessage =
+    "http://localhost/e-commerce-team-project/server/api/messages/send.php";
   const button = document.getElementById("send-input");
   button.addEventListener("click", send);
   const userInput = document.getElementById("user-input");
@@ -57,6 +59,15 @@ function chatRender() {
   });
   function send() {
     sendInput(userInput);
+
+    params = new URLSearchParams();
+    params.append("sender_id", localStorage.getItem("id"));
+    params.append("receiver_id", 39);
+    params.append("message", userInput.value);
+    axios.post(sendMessage, params).then((res) => {
+      console.log(res);
+    });
+
     userInput.value = "";
   }
 }
