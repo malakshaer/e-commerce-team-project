@@ -502,3 +502,19 @@ input {
 .display-none {
   display: none;
 }
+
+.product-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.texts {
+  color: #54549f;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkout-section {
+  padding-top: 2rem;
+}
