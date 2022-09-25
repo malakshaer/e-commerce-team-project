@@ -325,3 +325,17 @@ img {
     width: 2rem;
   }
 }
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: 53rem) {
+  .sellers .seller-section {
+    display: none;
+  }
+}
