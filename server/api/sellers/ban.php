@@ -12,7 +12,7 @@ $query->execute();
 
 if($query)
 {
-  echo "done successfully!";
+  echo "done successfully!";  
 
 }
 else
