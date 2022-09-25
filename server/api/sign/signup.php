@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $email = $_POST["email"];
     $password = $_POST["password"];
     $birthday =$_POST["birthday"];
-    $user_type_id = 2;
+    $user_type_id = 1;
     $is_ban = 0;
     $code = rand(0,10)*100;
     $code .= rand(0,10)*100;
