@@ -1,5 +1,7 @@
 const banAPI =
   "http://localhost/e-commerce-team-project/server/api/users/ban.php";
+const editAPI =
+  "http://localhost/e-commerce-team-project/server/api/users/edit.php";
 
 const userCard = (users, option = "Edit") => {
   var usersList = "";
@@ -34,24 +36,6 @@ const loopingOverUserCards = () => {
           reader.onload = (event) => {
             document.getElementById("label-img").src = event.target.result;
             basedImg = btoa(event.target.result);
-
-            //
-            // let image = atob(basedImg).split("base64,")[1];
-            // let formData = new FormData();
-            // formData.append("profile_id", userId);
-            // formData.append("image", image);
-
-            // fetch(`${serverDir}/api/add_er_pic.php`, {
-            //   method: "POST",
-            //   body: formData,
-            // })
-            //   .then((response) => response.json())
-            //   .then((data) => {
-            //     if (data.success) {
-            //       localStorage.setItem("er-url", `${serverDir}/user_${userId}.jpg`);
-            //       labelImg.src = `${serverDir}/api/user_${userId}/er.jpg`;
-            //     }
-            //   });
           };
         }
       };
@@ -62,8 +46,19 @@ const loopingOverUserCards = () => {
         if (banBtn.innerText == "Ban") banBtn.innerText = "Unban";
         else banBtn.innerText = "Ban";
         var params = new URLSearchParams();
-        params.append("user_id", document.getElementById("mail").value);
-        axios.post(banAPI);
+        params.append("user_id", edit.id);
+        axios.post(banAPI, params).then((res) => console.log(res.data));
+      };
+
+      let editBtn = document.getElementById("edit-btn");
+      editBtn.onclick = () => {
+        var params = new URLSearchParams();
+        params.append("id", edit.id);
+        params.append("name", document.getElementById("username").value);
+        params.append("email", document.getElementById("user-mail").value);
+        params.append("password", document.getElementById("user-pass").value);
+
+        axios.post(editAPI, params).then((res) => console.log(res.data));
       };
     };
 

@@ -5,7 +5,7 @@ const userRender = (id) => {
   return `<div class='edit-page'>
     <div class='edit-head'>    
     <div>Edit ${user.name}</div>
-    <button class="ban-btn ${user.is_ban && "unban"}" id='ban-btn'>${
+    <button class="ban-btn ${user.is_ban || "unban"}" id='ban-btn'>${
     user.is_ban ? "Unban" : "Ban"
   }</button>
 </div>
@@ -15,12 +15,12 @@ const userRender = (id) => {
     </label>
     <input class="file-input" id="img-input" type="file" />
     </div>
-    <input alt="" placeholder="Full name" value='${user.name}' />
-    <input placeholder="Email" id="email" value='${user.mail || ""}'/>
-    <input placeholder="Phone number" id="number" value='${
-      user.number || ""
+    <input alt="" placeholder="Full name" value='${user.name}' id='username' />
+    <input placeholder="Email" id="user-mail" value='${user.email}'/>
+    <input placeholder="Password" id="user-pass" value='${
+      user.password || ""
     }' />
-    <button class="sign-btn">Save</button>
+    <button class="sign-btn" id='edit-btn'>Save</button>
 
   </div>`;
 };
