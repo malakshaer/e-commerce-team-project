@@ -28,6 +28,7 @@ const imgArray = [
 
 let curIndex = 0;
 let imgDuration = 2000;
+var productss;
 
 function slideShow() {
   document.getElementById("image1").src = imgArray[curIndex].image;
@@ -56,18 +57,32 @@ const homeRender = () => {
     )
     .then((res) => {
       products = res.data;
+      productss = products;
       document.getElementById("products-list").innerHTML =
         productCard(products);
     });
-  // products.map(
-  //   (product, i) =>
-  //     (document.getElementById(product.id).onclick = () => {
-  //       alert(product.id);
-  //     })
-  // );
   clicked();
 };
 
+const sellerCard = (sellers) => {
+  var sellersList = "";
+  sellers.map(
+    (seller, i) =>
+      (sellersList += `<div class="user-card">
+        <div class="user-card-img-name">
+          <div class="user-card-img-container">
+            <img width="100%" src="${seller.profile_img}" alt="" />
+          </div>
+          <p class="user-card-name">${seller.name}</p>
+        </div>
+        <p href=""  class="user-card-edit" id='seller-${seller.id}'>more</p>
+      </div>
+      <section class="products seller-section" id='${seller.id}'></section>
+     `)
+  );
+  return sellersList;
+};
+let sellers;
 const sellerRender = () => {
   document.getElementById("app-body").innerHTML = ` <div class="search">
   <input
@@ -79,21 +94,26 @@ const sellerRender = () => {
         />
     <button class="button search-btn">Search</button></div>
   <section class="sellers" id="sellers-list"></section>`;
+  axios
+    .post("http://localhost/e-commerce-team-project/server/api/sellers/all.php")
+    .then((res) => {
+      sellers = res.data;
+      document.getElementById("sellers-list").innerHTML = sellerCard(sellers);
+    });
 
-  document.getElementById("sellers-list").innerHTML = sellerCard();
-  console.log(document.querySelectorAll(".seller-section"));
-  sellers.map((seller) => {
-    document.getElementById(seller.name).innerHTML = productCard(
-      products.filter((item) => item.seller_name == seller.name).slice(0, 4)
-    );
-  });
-  console.log(sellers);
-  sellers.map(
-    (seller) =>
-      (document.getElementById(`seller-${seller.id}`).onclick = () => {
-        storeProduct(seller.id);
-      })
-  );
+  // console.log(document.querySelectorAll(".seller-section"));
+  // sellers.map((seller) => {
+  //   document.getElementById(seller.id).innerHTML = productCard(
+  //     products.filter((item) => item.seller_id == seller.id).slice(0, 4)
+  //   );
+  // });
+  // console.log(sellers);
+  // sellers.map(
+  //   (seller) =>
+  //     (document.getElementById(`seller-${seller.id}`).onclick = () => {
+  //       storeProduct(seller.id);
+  //     })
+  // );
   clicked();
 };
 
