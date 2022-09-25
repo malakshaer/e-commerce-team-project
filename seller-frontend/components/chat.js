@@ -1,21 +1,3 @@
-// let chatMessages = "";
-// const chatMessage = () => {
-//   chatMessages = "";
-
-//   users.map(
-//     (user) =>
-//       (chatMessages += `
-//           <div class="chat-message left">
-//             <div class="chat-message-text left">
-//               ${user.message}
-//             </div>
-//             <div class="chat-message-date left">${user.date}</div>
-//           </div>
-//         `)
-//   );
-//   return chatMessages;
-// };
-// document.getElementById("chat-box").innerHTML = chatMessage();
 var chatMessages;
 function chatRender() {
   const chatHeader = `
@@ -28,9 +10,6 @@ function chatRender() {
               <img src="Images/mail-icon.svg" alt="Email Icon" />
             </div>
             <h2>${users[0].name}</h2>
-          </div>
-          <div class="chat-add-icon pages-header-add-icon">
-            <img src="./Images/add-icon.svg" alt="Add Icon" />
           </div>
         </div>
 

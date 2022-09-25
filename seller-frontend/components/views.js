@@ -1,4 +1,4 @@
-function productsRender() {
+function viewsRender() {
   const productsHeader = `
         <div
           class="products-header-container pages-header-container"
@@ -10,37 +10,19 @@ function productsRender() {
             </div>
             <h2>Products</h2>
           </div>
-          <div class="products-add-icon pages-header-add-icon">
-            <img src="./Images/add-icon.svg" alt="Add Icon" />
-          </div>
         </div>
-
-        <div class="pages-select-container">
-          <select name="categories" id="categories-select">
-          </select>
-        </div>
-
+        <div class="views-subtitle"> Top Viewed Products</div>
         <div
           class="products-content-container pages-content-container"
           id="products-content"
         ></div>
       `;
 
-  function categoriesSelect() {
-    let categoriesSelects = "";
-
-    categories.map((category) => {
-      categoriesSelects += `
-          <option value="${category}">${category}</option>
-        `;
-    });
-    return categoriesSelects;
-  }
-
-  function productsContent(selectedOption) {
+  function productsContent() {
     let productsList = "";
-    selectedOption.map((product) => {
-      productsList += `
+    products.map((product, i) => {
+      if (i < 5) {
+        productsList += `
           <div class="products-content pages-content">
             <div class="products-content-img">
               <img src="${product.img}" alt="Product Image" />
@@ -60,27 +42,10 @@ function productsRender() {
             </div>
           </div>
         `;
+      }
     });
     return productsList;
   }
-  let initialCategory = categories[0];
-  let filteredProducts = [];
-
   pageWrapper.innerHTML = productsHeader;
-  let initialProducts = products.filter(
-    (product) => product.category == initialCategory
-  );
-
-  document.getElementById("products-content").innerHTML =
-    productsContent(initialProducts);
-  const selectedOption = document.getElementById("categories-select");
-  selectedOption.onchange = function () {
-    filteredProducts = products.filter(
-      (product) => product.category == selectedOption.value
-    );
-    document.getElementById("products-content").innerHTML =
-      productsContent(filteredProducts);
-  };
-
-  document.getElementById("categories-select").innerHTML = categoriesSelect();
+  document.getElementById("products-content").innerHTML = productsContent();
 }

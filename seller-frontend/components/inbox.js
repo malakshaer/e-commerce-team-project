@@ -10,9 +10,6 @@ function inboxRender() {
             </div>
             <h2>Inbox</h2>
           </div>
-          <div class="inbox-add-icon pages-header-add-icon">
-            <img src="./Images/add-icon.svg" alt="Add Icon" />
-          </div>
         </div>
 
         <div

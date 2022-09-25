@@ -402,14 +402,6 @@ h3 {
   align-items: flex-end;
 }
 
-/* .chat-message-text.left {
-  padding-right: 20%;
-}
-
-.chat-message-text.right {
-  padding-left: 20%;
-} */
-
 .chat-message-date {
   font-size: 0.8rem;
   font-weight: 700;
@@ -448,6 +440,11 @@ h3 {
 .chat-send-img {
   height: 3rem;
   cursor: pointer;
+}
+
+/* Views Page */
+.views-subtitle {
+  padding-left: 5rem;
 }
 
 /*** End of Pages Content ***/

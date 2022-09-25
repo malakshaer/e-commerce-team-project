@@ -12,9 +12,6 @@ function revenueRender() {
             </div>
             <h2>Revenue</h2>
           </div>
-          <div class="revenue-add-icon pages-header-add-icon">
-            <img src="./Images/add-icon.svg" alt="Add Icon" />
-          </div>
         </div>
 
         <div
