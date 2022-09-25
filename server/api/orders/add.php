@@ -6,7 +6,11 @@
   
   
   $client_id = $_POST["client_id"];
+  $seller_id= $_POST["seller_id"];
   $product_list = $_POST["product_list"];
+
+
+
 
   
   

@@ -3,15 +3,11 @@
 include("../../connection.php");
 
 
-$seller_id = $_POST["seller_id"];
+$user_id = $_POST["user_id"];
 
-<<<<<<< HEAD
-$query = "UPDATE users SET is_ban = !is_ban WHERE id= ? ";
-=======
 $query = "UPDATE users SET is_ban = !is_ban   WHERE id= ? ";
->>>>>>> origin/backend
 $query = $mysqli->prepare($query);
-$query->bind_param("s", $seller_id);
+$query->bind_param("s", $user_id);
 $query->execute();
 
 if($query)
