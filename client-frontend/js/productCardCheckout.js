@@ -2,23 +2,24 @@ const checkoutCard = (products) => {
   var productList = "";
   products.map(
     (product, i) =>
-      (productList += `<div class="product-card horizontal">
-        <div class="product-card-img-container">
+      (productList += `<div class="product-card horizontal" >
+        <div class="product-card-img-container clicked"  id="${product.id}">
           <img
-            class="product-card-img"
-            src="https://static.overlay-tech.com/assets/10a60b5a-9b0c-4ecd-afa8-f43f3ff9021d.png"
+            class="product-card-img "
+            src=${product.picture_img}
             alt=""
+           
           />
         </div>
         <div class="card-info">
           <div class="product-card-info">
             <div class="product-name-seller">
-              <p class="product-name">Product name</p>
+              <p class="product-name">${product.name}</p>
               <p class="seller-brand">Seller brand</p>
             </div>
   
             <div class="product-price">
-              <p class="price">Price</p>
+              <p class="price">$${product.price}</p>
               <p class="discount">Discount</p>
             </div>
             <div class="product-card-icons">
@@ -54,5 +55,3 @@ const checkoutCard = (products) => {
   );
   return productList;
 };
-
-document.getElementById("checkout_cards").innerHTML = checkoutCard(products);

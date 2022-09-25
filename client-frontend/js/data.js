@@ -1,0 +1,561 @@
+let products;
+axios
+  .get(
+    "http://localhost/e-commerce-team-project/server/api/products/get_all_products.php"
+  )
+  .then((res) => {
+    products = res.data;
+  });
+
+// const products = [
+//   {
+//     id: 1,
+//     product_name: "Hot Chocolate - Individual",
+//     price: "$34.51",
+//     text: "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 5,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 2,
+//     product_name: "Soup - Campbells Pasta Fagioli",
+//     price: "$39.00",
+//     text: "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 11,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 3,
+//     product_name: "Pasta - Orzo, Dry",
+//     price: "$98.69",
+//     text: "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 1,
+//     category_id: 7,
+//     seller_name: "Gabtune",
+//   },
+//   {
+//     id: 4,
+//     product_name: "Wine - White, Chardonnay",
+//     price: "$56.26",
+//     text: "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 5,
+//     category_id: 2,
+//     seller_name: "Bluezoom",
+//   },
+//   {
+//     id: 5,
+//     product_name: "Glass Clear 7 Oz Xl",
+//     price: "$86.79",
+//     text: "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 15,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 6,
+//     product_name: "Green Tea Refresher",
+//     price: "$70.13",
+//     text: "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 8,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 7,
+//     product_name: "Sausage - Liver",
+//     price: "$83.39",
+//     text: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 5,
+//     category_id: 2,
+//     seller_name: "Bluezoom",
+//   },
+//   {
+//     id: 8,
+//     product_name: "Sugar - Invert",
+//     price: "$36.94",
+//     text: "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 5,
+//     category_id: 1,
+//     seller_name: "Bluezoom",
+//   },
+//   {
+//     id: 9,
+//     product_name: "Bread - Sour Sticks With Onion",
+//     price: "$25.03",
+//     text: "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 1,
+//     category_id: 7,
+//     seller_name: "Gabtune",
+//   },
+//   {
+//     id: 10,
+//     product_name: "Chinese Foods - Pepper Beef",
+//     price: "$92.00",
+//     text: "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 11,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 11,
+//     product_name: "Mini - Vol Au Vents",
+//     price: "$21.41",
+//     text: "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 15,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 12,
+//     product_name: "Waffle Stix",
+//     price: "$94.81",
+//     text: "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 3,
+//     category_id: 4,
+//     seller_name: "Rhynyx",
+//   },
+//   {
+//     id: 13,
+//     product_name: "Pastry - Baked Cinnamon Stick",
+//     price: "$42.62",
+//     text: "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 15,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 14,
+//     product_name: "Rum - Coconut, Malibu",
+//     price: "$21.00",
+//     text: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 12,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 15,
+//     product_name: "Baking Soda",
+//     price: "$58.43",
+//     text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 5,
+//     category_id: 1,
+//     seller_name: "Bluezoom",
+//   },
+//   {
+//     id: 16,
+//     product_name: "Artichoke - Hearts, Canned",
+//     price: "$18.69",
+//     text: "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 5,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 17,
+//     product_name: "Lettuce - Red Leaf",
+//     price: "$38.40",
+//     text: "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 3,
+//     category_id: 14,
+//     seller_name: "Rhynyx",
+//   },
+//   {
+//     id: 18,
+//     product_name: "V8 Splash Strawberry Kiwi",
+//     price: "$88.26",
+//     text: "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 5,
+//     category_id: 6,
+//     seller_name: "Bluezoom",
+//   },
+//   {
+//     id: 19,
+//     product_name: "Burger Veggie",
+//     price: "$14.06",
+//     text: "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 5,
+//     category_id: 2,
+//     seller_name: "Bluezoom",
+//   },
+//   {
+//     id: 20,
+//     product_name: "Wine - Charddonnay Errazuriz",
+//     price: "$42.08",
+//     text: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 5,
+//     category_id: 6,
+//     seller_name: "Bluezoom",
+//   },
+//   {
+//     id: 21,
+//     product_name: "Wine - Jackson Triggs Okonagan",
+//     price: "$79.35",
+//     text: "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 5,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 22,
+//     product_name: "Pork - Backs - Boneless",
+//     price: "$93.78",
+//     text: "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 8,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 23,
+//     product_name: "Shichimi Togarashi Peppeers",
+//     price: "$16.60",
+//     text: "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 5,
+//     category_id: 6,
+//     seller_name: "Bluezoom",
+//   },
+//   {
+//     id: 24,
+//     product_name: "Spice - Greek 1 Step",
+//     price: "$26.26",
+//     text: "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 12,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 25,
+//     product_name: "Gelatine Leaves - Envelopes",
+//     price: "$48.90",
+//     text: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 3,
+//     category_id: 14,
+//     seller_name: "Rhynyx",
+//   },
+//   {
+//     id: 26,
+//     product_name: "Crackers - Melba Toast",
+//     price: "$73.51",
+//     text: "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 3,
+//     category_id: 14,
+//     seller_name: "Rhynyx",
+//   },
+//   {
+//     id: 27,
+//     product_name: "Liquid Aminios Acid - Braggs",
+//     price: "$74.75",
+//     text: "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 11,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 28,
+//     product_name: "Mushroom - Morels, Dry",
+//     price: "$90.57",
+//     text: "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 8,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 29,
+//     product_name: "Island Oasis - Wildberry",
+//     price: "$63.61",
+//     text: "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 12,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 30,
+//     product_name: "Pomegranates",
+//     price: "$25.93",
+//     text: "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 8,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 31,
+//     product_name: "Raisin - Golden",
+//     price: "$56.14",
+//     text: "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 3,
+//     category_id: 4,
+//     seller_name: "Rhynyx",
+//   },
+//   {
+//     id: 32,
+//     product_name: "Soap - Mr.clean Floor Soap",
+//     price: "$67.83",
+//     text: "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 3,
+//     category_id: 14,
+//     seller_name: "Rhynyx",
+//   },
+//   {
+//     id: 33,
+//     product_name: "Compound - Pear",
+//     price: "$79.42",
+//     text: "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 11,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 34,
+//     product_name: "Pineapple - Canned, Rings",
+//     price: "$32.39",
+//     text: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 5,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 35,
+//     product_name: "Beer - Blue",
+//     price: "$44.22",
+//     text: "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 5,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 36,
+//     product_name: "Beer - Camerons Cream Ale",
+//     price: "$95.90",
+//     text: "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 1,
+//     category_id: 7,
+//     seller_name: "Gabtune",
+//   },
+//   {
+//     id: 37,
+//     product_name: "Beer - Heinekin",
+//     price: "$33.43",
+//     text: "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 3,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 38,
+//     product_name: "Compound - Mocha",
+//     price: "$56.15",
+//     text: "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 1,
+//     category_id: 7,
+//     seller_name: "Gabtune",
+//   },
+//   {
+//     id: 39,
+//     product_name: "Lentils - Red, Dry",
+//     price: "$70.84",
+//     text: "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 5,
+//     category_id: 2,
+//     seller_name: "Bluezoom",
+//   },
+//   {
+//     id: 40,
+//     product_name: "Bread Crumbs - Panko",
+//     price: "$41.95",
+//     text: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 15,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 41,
+//     product_name: "Chinese Foods - Thick Noodles",
+//     price: "$11.75",
+//     text: "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 15,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 42,
+//     product_name: "Wine - Red, Metus Rose",
+//     price: "$35.55",
+//     text: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 5,
+//     category_id: 6,
+//     seller_name: "Bluezoom",
+//   },
+//   {
+//     id: 43,
+//     product_name: "Veal - Bones",
+//     price: "$44.71",
+//     text: "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 8,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 44,
+//     product_name: "Garlic - Elephant",
+//     price: "$24.12",
+//     text: "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 1,
+//     category_id: 9,
+//     seller_name: "Gabtune",
+//   },
+//   {
+//     id: 45,
+//     product_name: "Hinge W Undercut",
+//     price: "$76.67",
+//     text: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 1,
+//     category_id: 7,
+//     seller_name: "Gabtune",
+//   },
+//   {
+//     id: 46,
+//     product_name: "Squid - Breaded",
+//     price: "$33.81",
+//     text: "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 4,
+//     category_id: 8,
+//     seller_name: "Realfire",
+//   },
+//   {
+//     id: 47,
+//     product_name: "Table Cloth 62x120 White",
+//     price: "$82.11",
+//     text: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 1,
+//     category_id: 9,
+//     seller_name: "Gabtune",
+//   },
+//   {
+//     id: 48,
+//     product_name: "Bagels Poppyseed",
+//     price: "$85.59",
+//     text: "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 5,
+//     category_id: 1,
+//     seller_name: "Bluezoom",
+//   },
+//   {
+//     id: 49,
+//     product_name: "Bread - Roll, Whole Wheat",
+//     price: "$27.60",
+//     text: "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 2,
+//     category_id: 12,
+//     seller_name: "Nlounge",
+//   },
+//   {
+//     id: 50,
+//     product_name: "General Purpose Trigger",
+//     price: "$72.05",
+//     text: "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+//     picture:
+//       "https://www.target.com.au/medias/static_content/product/images/large/43/19/A1384319.jpg",
+//     seller_id: 3,
+//     category_id: 14,
+//     seller_name: "Rhynyx",
+//   },
+// ];

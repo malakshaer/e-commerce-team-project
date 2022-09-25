@@ -2,7 +2,7 @@
 
 include("../../connection.php");
 
-  $categories_id = $_GET["categories_id"];
+  $id = $_POST["id"];
   $name = $_POST["name"];
   $description = $_POST["description"];
   $price =$_POST["price"];
@@ -10,8 +10,8 @@ include("../../connection.php");
   $picture_img = $_POST["picture_img"];
 
 
-  $query = $mysqli->prepare("UPDATE products SET name = ?, description = ?, price = ?, discount_price = ?, picture_img = ? WHERE id = $categories_id");
-  $query->bind_param("sssss", $name,$description,$price,$discount_price,$picture_img);
+  $query = $mysqli->prepare("UPDATE products SET name = ?, description = ?, price = ?, discount_price = ?, picture_img = ? WHERE id = ?");
+  $query->bind_param("ssssss", $name,$description,$price,$discount_price,$picture_img,$id);
   $query->execute();
 
 

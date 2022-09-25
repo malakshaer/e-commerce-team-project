@@ -3,7 +3,6 @@ const clientsRender = () => {
 
   axios.get(getClientsAPI).then((res) => {
     document.getElementById("users-list").innerHTML = userCard(res.data);
-
     loopingOverUserCards();
   });
 };

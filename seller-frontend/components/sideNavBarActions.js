@@ -6,14 +6,7 @@ const navViewsBtn = document.getElementById("nav-views-btn");
 const navAdsBtn = document.getElementById("nav-ads-btn");
 const navInboxBtn = document.getElementById("nav-inbox-btn");
 
-// the first shown in the body
-// document.getElementById("app-body").innerHTML = uList("Sellers", "+");
-// document.getElementById("users-list").innerHTML = userCard(sellers);
-
-// loopingOverUserCards();
-
-// clicking on categories in nav bar
-navCategoriesBtn.onclick = () => {
+function onLaunch() {
   navCategoriesBtn.children[0].src = "./Images/categories-icon.svg";
   navProductsBtn.children[0].src = "./Images/products-icon-active.svg";
   navRevenueBtn.children[0].src = "./Images/revenue-icon-active.svg";
@@ -29,6 +22,13 @@ navCategoriesBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.remove("active");
+
+  categoriesRender();
+}
+
+// clicking on categories in nav bar
+navCategoriesBtn.onclick = () => {
+  onLaunch();
 };
 
 //clicking on products nav bar
@@ -48,6 +48,8 @@ navProductsBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.remove("active");
+
+  productsRender();
 };
 
 navRevenueBtn.onclick = () => {
@@ -66,6 +68,8 @@ navRevenueBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.remove("active");
+
+  revenueRender();
 };
 
 navDiscountBtn.onclick = () => {
@@ -84,6 +88,8 @@ navDiscountBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.remove("active");
+
+  discountRender();
 };
 
 navViewsBtn.onclick = () => {
@@ -102,6 +108,8 @@ navViewsBtn.onclick = () => {
   navViewsBtn.classList.add("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.remove("active");
+
+  viewsRender();
 };
 
 navAdsBtn.onclick = () => {
@@ -120,6 +128,8 @@ navAdsBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.add("active");
   navInboxBtn.classList.remove("active");
+
+  adsRender();
 };
 
 navInboxBtn.onclick = () => {
@@ -138,4 +148,6 @@ navInboxBtn.onclick = () => {
   navViewsBtn.classList.remove("active");
   navAdsBtn.classList.remove("active");
   navInboxBtn.classList.add("active");
+
+  inboxRender();
 };

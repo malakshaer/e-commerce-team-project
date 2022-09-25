@@ -2,7 +2,7 @@
 
 include("../../connection.php");
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+
 
   $client_id = $_GET["client_id"];
   
@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   }else{
       echo "something went wrong";
   }
-}
+
 
 ?>
 

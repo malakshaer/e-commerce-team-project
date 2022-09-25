@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spurce Trolley Seller</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="./components/data.js" defer></script>
     <script src="./components/topBar.js" defer></script>
     <script src="./components/sideNavBar.js" defer></script>
     <script src="./components/topBarActions.js" defer></script>
     <script src="./components/sideNavBarActions.js" defer></script>
-    <!-- <script src="./components/categories.js"></script>
-    <script src="./components/categoriesSelect.js"></script>
-    <script src="./components/products.js"></script> -->
-    <!-- <script src="./components/ads.js"></script> -->
-    <!-- <script src="./components/discount.js"></script> -->
-    <!-- <script src="./components/revenueFilter.js"></script>
-    <script src="./components/revenueResult.js"></script> -->
-    <!-- <script src="./components/inbox.js"></script> -->
-    <!-- <script src="./components/chat.js" defer></script> -->
+    <script src="./components/categories.js" defer></script>
+    <script src="./components/products.js" defer></script>
+    <script src="./components/revenue.js" defer></script>
+    <script src="./components/views.js" defer></script>
+    <script src="./components/discount.js" defer></script>
+    <script src="./components/ads.js" defer></script>
+    <script src="./components/chat.js" defer></script>
+    <script src="./components/inbox.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- Start of layout divider -->
@@ -33,7 +34,7 @@
       <!-- End of side-nav -->
 
       <!-- Start of pages content -->
-      <div class="pages-content-wrapper"></div>
+      <div class="pages-content-wrapper" id="page-content-wrapper"></div>
       <!-- End of pages content -->
     </div>
     <!-- End of layout divider -->
