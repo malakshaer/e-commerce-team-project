@@ -1,3 +1,11 @@
+let signAPI =
+  "http://localhost/e-commerce-team-project/server/api/sign/signin.php";
+
+let signupAPI =
+  "http://localhost/e-commerce-team-project/server/api/sign/signup.php";
+let checkCode =
+  "http://localhost/e-commerce-team-project/server/api/sign/verify_code.php";
+
 const signUp = () => {
   return `<div class="sign-container display-none"  id='sign-up-container'>
       <h1>Create new account</h1>
@@ -18,9 +26,9 @@ const validateCode = () => {
   return `  <div class="sign-container display-none"  id='validation-container'>
         <h1>Enter the verification code</h1>
         <div class="inputs-container">
-          <input placeholder="code" id='name' />
+          <input placeholder="code" id='validate' />
         </div>
-        <button class="sign-btn" >Verify</button>
+        <button class="sign-btn" id="valid">Verify</button>
       </div>
     </div>`;
 };
@@ -38,8 +46,12 @@ const signIn = () => {
     </div>`;
 };
 
-document.getElementById("sign-body").innerHTML =
-  signUp() + signIn() + validateCode();
+if (localStorage.getItem("user")) {
+  window.location.replace("../index.html");
+} else {
+  document.getElementById("sign-body").innerHTML =
+    signUp() + signIn() + validateCode();
+}
 
 document.getElementById("have-account").onclick = () => {
   document.getElementById("sign-up-container").classList.add("display-none");
@@ -59,9 +71,37 @@ document.getElementById("sign-up-btn").onclick = () => {
   document
     .getElementById("validation-container")
     .classList.remove("display-none");
+  let param = new URLSearchParams();
+  param.append("email", document.getElementById("email").value);
+  param.append("password", document.getElementById("password").value);
+  param.append("birthday", document.getElementById("birth").value);
+  param.append("name", document.getElementById("name").value);
+  param.append("email", document.getElementById("email").value);
+
+  axios.post(signupAPI, param).then((res) => {
+    console.log(res);
+    localStorage.setItem("user", JSON.stringify(res.data));
+  });
 };
 
 document.getElementById("sign-in-btn").onclick = () => {
   document.getElementById("main-container").classList.remove("display-none");
   document.getElementById("sign-container").classList.add("display-none");
+};
+document.getElementById("valid").onclick = () => {
+  let params = new URLSearchParams();
+  params.append("code", document.getElementById("validate").value);
+  axios.post(checkCode, params).then((res) => {
+    console.log(res.data);
+    if (res.data) {
+      window.location.replace("../index.html");
+    } else {
+      const err = document.createElement("h2");
+      err.innerText = "Wrong Validation Code";
+      err.style.color = "red";
+      document
+        .getElementById("validation-container")
+        .insertAdjacentElement("afterbegin", err);
+    }
+  });
 };
