@@ -392,3 +392,17 @@ img {
   margin-bottom: 2vh;
   gap: 1rem;
 }
+
+.cart-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.cart-content > .products {
+  max-width: 60rem;
+}
+.cart-content .checkout-section {
+  justify-self: center;
+  margin-bottom: 10rem;
+}
